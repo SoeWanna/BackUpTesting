@@ -1983,11 +1983,11 @@
       x.style.display = "none";
   }
   </script>
-                <script>
-                  function showname () {
-                  var name = document.getElementById('x_passportattachment'); 
-                  document.getElementById('x_passportattachment_filename').value=name.files.item(0).name ; 
-                  };
+    <script>
+        function showname () {
+        var name = document.getElementById('x_passportattachment'); 
+        document.getElementById('x_passportattachment_filename').value=name.files.item(0).name ; 
+        };
                   function namecombinepass(){
                   var fullPath = document.getElementById('x_passportattachment').value;
                   var image = document.getElementById('x_passportattachment');
