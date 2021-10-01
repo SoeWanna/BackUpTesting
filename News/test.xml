@@ -1,1 +1,10 @@
-Hello This is testing of file commit. And testing and hello And
+<div class="col-lg-4 col-md-8">
+    <div class="o_website_form_date input-group date" id="datepicker6" data-target-input="nearest">
+      <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker6" name="x_dob" required=""/>
+      <div class="input-group-append" data-target="#datepicker6" data-toggle="datetimepicker">
+        <div class="input-group-text">
+          <i class="fa fa-calendar"/>
+        </div>
+      </div>
+    </div>
+  </div>
