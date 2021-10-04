@@ -877,7 +877,7 @@
                  <span id="show_other_attachment_pass"/></a>
                  <img id="testpop"/>
                </div>
-               <!--<input type="text" id="x_passportattachment_filename" name="x_passportattachment_filename"/>-->
+               <input type="hidden" id="x_passportattachment_filename" name="x_passportattachment_filename"/>
              </div>
              <div id="popodpass" class="modal">
               <div class="bg_white">
@@ -1983,11 +1983,11 @@
       x.style.display = "none";
   }
   </script>
-    <script>
-        function showname () {
-        var name = document.getElementById('x_passportattachment'); 
-        document.getElementById('x_passportattachment_filename').value=name.files.item(0).name ; 
-        };
+                <script>
+                  function showname () {
+                  var name = document.getElementById('x_passportattachment'); 
+                  document.getElementById('x_passportattachment_filename').value=name.files.item(0).name ; 
+                  };
                   function namecombinepass(){
                   var fullPath = document.getElementById('x_passportattachment').value;
                   var image = document.getElementById('x_passportattachment');
