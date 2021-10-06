@@ -1,0 +1,3340 @@
+<t t-name="website.acperegistrationform">
+  <t t-call="website.layout">
+    <style>
+         .oe_structure{
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+.form-field{
+font-size: 13px;
+  }
+  .form-control{
+font-size: 13px;
+  }
+  
+form label {
+  font-weight: bold !important;
+  
+}
+.form-group {
+margin-bottom: 0.5rem !important;
+}
+.form-group1 {
+margin-bottom: 0rem !important;
+}
+label {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}
+label1 {
+  display: inline-block;
+  margin-bottom: 0rem;
+}
+.col-form-label {
+  padding-top: 0px;
+  }
+.sub_title{
+  font-weight: bold;
+  font-size: 13px;
+}
+.padding_input_box{
+  padding-left: 63px;
+}
+.sub_title{
+  font-weight: bold;
+  font-size: 13px;
+}
+.padding_input_box{
+  padding-left: 63px;
+}
+.margin_input_box{
+  margin-left:29px;
+}
+.margin_input_box1{
+  margin-left:0px;
+}
+.text-danger {
+  color: #dc3545 !important;
+  font-size: 13px;
+  
+  }
+  textarea{
+      resize: none;
+      }
+  /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    .btn{
+            padding: 0.2rem 0.2rem !important;
+            width: 74px;
+            font-size:13px;
+            }
+   #myImg {
+border-radius: 5px;
+cursor: pointer;
+transition: 0.3s;
+}
+  
+  #myImg:hover {opacity: 0.7;}
+
+
+#myImg1 {
+border-radius: 5px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+#myImg1:hover {opacity: 0.7;}
+
+#myImg3 {
+border-radius: 5px;
+cursor: pointer;
+transition: 0.3s;
+}
+  
+  #myImg3:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+/* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;
+margin-top:50px;
+margin-bottom:25px;
+
+}
+
+/* Caption of Modal Image */
+#caption {
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;
+text-align: center;
+color: #ccc;
+padding: 10px 0;
+
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+-webkit-animation-name: zoom;
+-webkit-animation-duration: 0.6s;
+animation-name: zoom;
+animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+from {-webkit-transform:scale(0)} 
+to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+from {transform:scale(0)} 
+to {transform:scale(1)}
+}
+.bg_white{
+margin: auto;
+display: block;
+width: 40%;
+max-width: 900px;
+text-align: center;
+color: #ccc;
+padding: 10px 0;
+height: auto;
+background-color:#ffffff;
+
+}
+
+/* The Close Button */
+.close {
+position: absolute;
+top: 16% ;
+right:31%;
+color: black;
+font-size: 20px;
+font-weight: bold;
+transition: 0.3s;
+font: normal normal normal FontAwesome;
+
+}
+
+.close:hover,
+.close:focus {
+color: #bbb;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+.modal-content {
+width: 100%;
+}
+}      
+  
+  
+
+@media screen and (max-width:768px) {
+.mob
+{
+width: 190px !important;
+}
+}      
+
+
+select {
+border-color: #ced4da;
+outline-color: #ced4da;
+ box-shadow: none;
+}
+.popup {
+width: 50%;
+padding: 15px;
+left: 0;
+margin-left: 5%;
+border: 1px solid rgb(1,82,73);
+border-radius: 10px;
+background: white;
+position: absolute;
+top: 15%;
+box-shadow: 5px 5px 5px #000;
+z-index: 10001;
+font-size:16px;
+text-align: center;
+
+}
+.font_color{
+color:white;
+}
+.overlay {
+position: fixed;
+width: 100%;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0,0,0,.85);
+z-index: 10000;
+display :none;
+}
+@media (min-width: 768px) {
+.popup {
+width: 36.66666666%;
+margin-left: 16.666666%;
+}
+}
+@media (min-width: 992px) {
+.popup {
+width: 50%;
+margin-left: 25%;
+}
+}
+@media (min-width: 1200px) {
+.popup {
+width: 25.33333%;
+margin-left: 37.33333%;
+}
+}
+
+.disabled_btn_design{
+color: #FFFFFF;
+background-color: #00A09D;
+border-color: #00A09D;
+opacity: 0.65;
+user-select: none;
+}
+.width_height_ok{
+width: 53.3333px;
+height: 32.4px;
+}
+.alignment_of_text{
+float:left;
+margin-left:10px;
+} 
+        .menu-btn {
+            border-radius: 0.25rem;
+            border: 0.5px solid lightgrey;
+            font-size: 13px;;
+            padding: 2px 10px;
+            background-color: white;
+            float: left;
+            margin-right: 4px;
+        }
+
+        .menu {
+            padding-top: 10px;
+            z-index: 200;
+            margin-top: 32px;
+            background-color: white;
+            position: absolute;
+            overflow: auto;
+            height: 200px;
+            width: 340px;
+        }
+
+        .menu-option {
+            padding: 6px 20px 6px;
+            width:350px;
+            
+        }
+        
+        #overlay {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+        }
+</style>
+    <div id="wrap" class="oe_structure oe_empty">
+      <t t-if="not pdata">
+        <form action="/website_form/" method="post" class="s_website_form container-fluid mt10 o_fake_not_editable" enctype="multipart/form-data" data-name="Form Builder" data-model_name="hr.applicant" data-success_page="/acpeproexperience">
+          <div class="container-fluid">
+            <h1 class="text-center mb8" style="font-size: 15px; font-weight: bold;margin-left:10px;"><font style="font-size: 15px;font-weight: bold;float:left;">Step 1</font> 
+              APPLICATION FOR  ASEAN CHARTERED PROFESSIONAL ENGINEER (ACPE) <span t-esc="counter"/>
+            </h1>
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3">
+                <label class="col-form-label o_fake_editable" for="job_id">
+                </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="job_id" value="2"/>
+              </div>
+            </div>
+            <div class="form-group row form-field o_fake_not_editable d-none">
+              <div class="col-lg-2">
+               <label class="col-form-label o_fake_editable" for="x_applied_date">Applied date.&amp;nbsp;</label>
+              </div>
+            <div class="col-lg-4 ">
+              <t t-if="todaydate">
+                <input type="text" class="form-control o_website_form_input" name="x_applied_date" t-att-value="todaydate.date().strftime('%d/%m/%Y')"/>
+              </t>
+            </div>
+            </div>
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="x_state">
+                    
+                </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="x_state" value="1"/>
+              </div>
+            </div>
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="partner_id">
+                    
+                </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="partner_id" t-att-value="request.env.user.partner_id.id"/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-10" style="padding-left:25px;">
+                <div class="form-group row form-field o_fake_not_editable">
+                  <!--<div class="col-lg-2">-->
+                  <!--  <label class="col-form-label o_fake_editable" for="x_reg_no">Register No.&amp;nbsp;<span style="color:red;">*</span></label>-->
+                  <!--</div>-->
+                  <!--<div class="col-lg-4">-->
+                  <!--  <input type="text" class="form-control o_website_form_input" name="x_reg_no" placeholder="ACPE-0000" required=""/>-->
+                  <!--</div>-->
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_reg_no">Register No.&amp;nbsp;<span style="color:red;">*</span></label>
+                  </div>
+                <div class="col-lg-4">
+                     <t t-if="lid">
+                        <t t-set="freg" t-value="lid.x_reg_no.split(':')[0]"/>
+                        <t t-set="lreg" t-value="int(lid.x_reg_no.split(':')[1])+1"/>
+                        
+                        <t t-set="reg" t-value="lid.x_reg_no.split(':')[0] +':'+ '{:06d}'.format(lreg)"/>
+                      <input type="text" class="form-control o_website_form_input" name="x_reg_no" placeholder="AEC App:000000" t-att-value="reg" readonly="true"/>
+                   </t>
+                     <t t-if="not lid">
+                       <input type="text" class="form-control o_website_form_input" name="x_reg_no" placeholder="AEC App-000000" value="AEC App:000001" readonly="true"/>
+                       </t>
+                  </div>
+                   <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="partner_name">Name&amp;nbsp;<span style="color:red;">*</span></label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control o_website_form_input" name="partner_name" required=""/>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                 
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_dob"> Date of Birth&amp;nbsp;<span style="color:red;">*</span> </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="o_website_form_date input-group date" id="datepicker15" data-target-input="nearest">
+                      <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker15" name="x_dob" required=""/>
+                      <div class="input-group-append" data-target="#datepicker15" data-toggle="datetimepicker">
+                        <div class="input-group-text">
+                          <i class="fa fa-calendar"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="email_from">Email&amp;nbsp;<span style="color:red;">*</span></label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control o_website_form_input" name="email_from" t-att-value="request.env.user.login" required=""/>
+                  </div>
+                </div>
+                  <div class="form-group row form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="partner_phone">Tel No.&amp;nbsp;<span style="color:red;">*</span></label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="number" class="form-control o_website_form_input" name="partner_phone" required=""/>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_fax_no">
+                     Fax No.&amp;nbsp;<span style="color:red;">*</span>
+                 </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control o_website_form_input" name="x_fax_no" />
+                  </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_address_en">
+                      Home Address&amp;nbsp;<span style="color:red;">*</span>
+                  </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <textarea class="form-control o_website_form_input" name="x_address_en" required=""/>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_office_address">
+                      Office Address &amp;nbsp;<span style="color:red;">*</span>
+                  </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <textarea class="form-control o_website_form_input" name="x_office_address" required=""/>
+                  </div>
+                </div>
+              
+                <div class="form-group row form-field o_fake_not_editable">
+                   <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_nrc_no_en">
+                       Identity Card No&amp;nbsp;<span style="color:red;">*</span>
+                    </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <select id="nrceng1" style="font-family:Pyidaungsu; border-radius:0.25rem; height:30px;width: 15%;" class="o_website_form_input" name="x_nrc1en" onchange="myFunction()">
+                      <option id="name" value="1">1</option>
+                      <option id="name" value="2">2</option>
+                      <option id="name" value="3">3</option>
+                      <option id="name" value="4">4</option>
+                      <option id="name" value="5">5</option>
+                      <option id="name" value="6">6</option>
+                      <option id="name" value="7">7</option>
+                      <option id="name" value="8">8</option>
+                      <option id="name" value="9">9</option>
+                      <option id="name" value="10">10</option>
+                      <option id="name" value="11">11</option>
+                      <option id="name" value="12">12</option>
+                      <option id="name" value="13">13</option>
+                      <option id="name" value="14">14</option>
+                    </select>
+                    <select id="nrceng2" style="font-family:Pyidaungsu; border-radius:0.25rem; height:30px;width: 30%;" name="x_nrc2en" onchange="myFunction()">
+                      <t t-foreach="nrc" t-as="nrc">
+                        <option>
+                          <t t-esc="nrc.x_name"/>
+                        </option>
+                      </t>
+                    </select>
+                    <select id="nrceng3" style="font-family:Pyidaungsu; border-radius:0.25rem; height:30px;width: 15%;" class="o_website_form_input" name="x_nrc3en" onchange="myFunction()">
+                      <option id="N">N</option>
+                      <option id="E">E</option>
+                      <option id="P">P</option>
+                    </select>
+                    <input type="number" class="mob o_website_form_input" id="nrceng4" onchange="myFunction()" name="x_nrc4en" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "6" style="width:36%; font-family:Pyidaungsu;  line-height: 27px;border: 1px solid #ced4da;border-radius: 0.25rem;" required=""/>
+                     <br/>
+                    <div style="padding-top:2px;display:none;">
+                      <span class="padding-right:9%">Checking NRC</span>
+                      <input type="text" style="font-family:Pyidaungsu; width:65%;" readonly="true" class="o_website_form_input" id="demo" name="x_nrc_no_en" value=""/>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_identity_card_date">
+         Identity&amp;nbsp;Card&amp;nbsp;Date&amp;nbsp;<span style="color:red;">*</span>
+      </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="o_website_form_date input-group date" id="datepicker16" data-target-input="nearest">
+                      <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker16" name="x_identity_card_date" required=""/>
+                      <div class="input-group-append" data-target="#datepicker16" data-toggle="datetimepicker">
+                        <div class="input-group-text">
+                          <i class="fa fa-calendar"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--<div class="row form-group form-field o_fake_not_editable">-->
+                 
+                <!--</div>-->
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_nrc_photo_front">
+                    Identity Card Photo (Front) &amp;nbsp;<span style="color:red;">*</span>
+                </label>
+                  </div>
+                  <div class="col-lg-4">
+                     <div style="margin: 5px 0px;" class="row">
+                    <input type="file" required="" class="form-control o_website_form_input" id="x_nrc_photo_front" name="x_nrc_photo_front" onchange="namecombi()" />
+                    </div>
+                     <div style="margin: 5px 0px;" class="row">
+                       <!--<img id="popf" />-->
+                    <a id="popf" onclick="popup();"><span id="show_nrc_front_name"/></a>
+                    <img id="testpop"/>
+                    <!--<a ><span id="show_nrc_front_name"></span></a>-->
+
+                    </div>
+                    <input type="hidden" name="x_nrc_photo_front_name" id="x_nrc_photo_front_name"/>
+                  </div>                  
+                  <!--<div class="col-lg-4">-->
+                  <!--  <input type="file" class="form-control o_website_form_input" id="x_nrc_photo_front" name="x_nrc_photo_front" onchange="namecombi()" />-->
+                  <!--  <input type="hidden" name="x_nrc_photo_front_name" id="x_nrc_photo_front_name"/>-->
+                  <!--    <div style="margin: 5px 0px;" class="row">-->
+                  <!--      <a id="popf" onclick="popup();"><span id="show_nrc_front_name"/></a>-->
+                  <!--    </div>-->
+                  <!--</div>-->
+                   <div id="popfront" class="modal">
+                     <div class="bg_white">
+                      <span class="close" id="closef">x</span>
+                      <img class="modal-content" id="pop1"/>
+                      <div id="caption"></div>
+                    </div>
+                     </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_nrc_photo_back">
+                    Identity Card Photo (Back) &amp;nbsp;<span style="color:red;">*</span>
+                </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div style="margin: 5px 0px;" class="row">
+                    <input type="file" required="" class="form-control o_website_form_input" id="x_nrc_photo_back" name="x_nrc_photo_back" onchange="backphotoname_combi()" />
+                    </div>
+                    <div style="margin: 5px 0px;" class="row">
+                      <a id="popb" onclick="popup();"><span id="show_nrc_back_name"/></a>
+                    <span id="show_nrc_back_name"></span>
+                    </div>
+                     <input type="hidden" name="x_nrc_photo_back_name" id="x_nrc_photo_back_name"/>
+                  </div>
+                  <div id="popback" class="modal">
+                    <div class="bg_white">
+                      <span class="close" id="closeb">x</span>
+                      <img class="modal-content" id="pop2"/>
+                      <div id="caption"></div>
+                    </div>
+                     </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" style="word-spacing: -2px;" for="x_practice_certificate_no">Practicing certificate No.<span style="color:red;">*</span>
+                 </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control o_website_form_input" name="x_practice_certificate_no" />
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_registration_date">
+                     Date of registration &amp;nbsp;<span style="color:red;">*</span>
+                 </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="o_website_form_date input-group date" id="datepicker17" data-target-input="nearest">
+                      <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker17" name="x_registration_date" required=""/>
+                      <div class="input-group-append" data-target="#datepicker17" data-toggle="datetimepicker">
+                        <div class="input-group-text">
+                          <i class="fa fa-calendar"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_practice_certificate_attachment">
+                     Practicing certificate attachment &amp;nbsp;<span style="color:red;">*</span>
+                 </label>
+                  </div>
+                  <div class="col-lg-4">
+                     <div style="margin: 5px 0px;" class="row">
+                      <input type="file" class="form-control o_website_form_input" name="x_practice" id="x_practice" multiple="true" onchange="PracticeMulti()" required=""/>
+                      </div>
+                      <div style="margin: 5px 0px;" class="row">
+                    <a id="ppop"><span id="show_practice_multi_filename"></span></a>
+                    </div>
+                  </div>
+                  <div id="practicepop" class="modal">
+                    <div class="bg_white">
+                      <span class="saveclose" id="practiceclose">x</span>
+                      <img class="modal-content" id="poppractice"/>
+                      <div id="caption"></div>
+                    </div>
+                     </div>
+                   <div class="col-lg-2">
+    <label class="col-form-label o_fake_editable" for="x_discipline_s">Engineering Discipline&amp;nbsp;<span style="color:red;">*</span></label>
+   </div>
+<div class="col-lg-4">
+   <input type="hidden" id="ch" value="0"/>
+  
+     <div class="d-none" id="overlay" onclick="hide(event)"></div>
+    <t t-if="ddata">
+       
+            <div>
+               <a id="dis" onclick="dropDown(event);" class="menu-btn form-control" style="text-align:center; height: auto; min-height:calc(1.5em + 0.75rem + 2px);">
+                   <span id="DIV"></span> <span id="cho">Choose Discipline</span><span style="float:right;"> &#9013; </span> 
+                   </a>
+                <div id="selist" class="d-none shadow rounded menu">
+                     <t t-foreach="ddata" t-as="dd">
+                    
+                        <span class="d-block menu-option"><label>
+                          <input t-att-id="dd.id" t-attf-onclick="function myCheckbox(){  
+                             
+                            var DIV = document.getElementById('DIV');
+                            var chid =  document.getElementById('ch').value;
+                            var ch = parseInt(chid);
+                            var ch1 = ch;
+                             
+                            if (ch &gt; 3){
+                                if(ch == 4){
+                                    var i;
+                                    for (i=0; i &lt;= 3; i++){
+                                        DIV.getElementsByTagName('button')[i].className = 'menu-btn d-none';
+                                    }
+                                }
+                                    
+                                var rm = document.createElement('button');
+                                rm.innerHTML = '{{dd.x_name}}';
+                                rm.setAttribute('id', 'reqsr' + '{{dd.id}}');
+                                rm.setAttribute('class','menu-btn d-none');
+                                rmid = 'reqsr' + '{{dd.id}}';
+                                
+                            }
+                             
+                            if (ch &lt;= 3){
+                                var oop = document.getElementById('spa');
+                                if (DIV.contains(oop)){
+                                     document.getElementById('spa').remove();
+                                };
+                                var rm = document.createElement('button');
+                                rm.innerHTML = '{{dd.x_name}}';
+                                rm.setAttribute('id', 'reqsr' + '{{dd.id}}');
+                                rm.setAttribute('class','menu-btn');
+                                rmid = 'reqsr' + '{{dd.id}}';
+                                
+                            }
+                              
+                            var des = document.getElementById('{{dd.id}}');
+                            
+                            if (des.checked) {  
+                                document.getElementById('cho').classList.add('d-none');
+                                ch++;
+                                DIV.appendChild(rm);
+                                
+                               
+                                document.getElementById('ch').value = ch;   
+                                if (ch &gt; 4){
+                                    var oop = document.getElementById('spa');
+                                    if (DIV.contains(oop)){
+                                       document.getElementById('spa').remove();
+                                    };
+                                    var op = document.createElement('span');
+                                    op.innerHTML = ch + ' options selected';
+                                    op.setAttribute('id', 'spa');
+                                    DIV.appendChild(op);
+                                }
+                            }      
+                            if (!des.checked) {   
+                                ch--;
+                                document.getElementById(rmid).remove();
+                                document.getElementById('ch').value = ch;
+                                if (ch == 0){
+                                    document.getElementById('cho').classList.remove('d-none');
+                                }
+                                if(ch &gt; 4){
+                                    var oop = document.getElementById('spa');
+                                    if (DIV.contains(oop)){
+                                      document.getElementById('spa').remove();
+                                    };
+                                    var op = document.createElement('span');
+                                    op.innerHTML = ch + ' options selected';
+                                    op.setAttribute('id', 'spa');
+                                    DIV.appendChild(op);
+                                }
+                                if(ch &lt;= 4){
+                                    var oop = document.getElementById('spa');
+                                    if (DIV.contains(oop)){
+                                      document.getElementById('spa').remove();
+                                    };
+                                    var i;
+                                    for (i=0; i &lt; ch; i++){
+                                        DIV.getElementsByTagName('button')[i].classList.remove('d-none');
+                                    }
+                                }
+                               }
+                              } myCheckbox();" type="checkbox" name="x_discipline" t-att-value="dd.id"/>
+                               <t t-esc="dd.x_name"/></label></span>
+                                </t>
+                    </div>
+                </div>
+                  </t>
+              </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_academic_qualification">
+                     Academic Qualification<span style="color:red;">*</span>
+                 </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control o_website_form_input" name="x_academic_qualification"/>
+                  </div>
+              <div class="col-lg-2">
+                <label class="col-form-label o_fake_editable" for="x_academic">
+                 Academic Qualification Attachment &amp;nbsp;<span style="color:red;">*</span>
+             </label>
+              </div>
+                  <div class="col-lg-4">
+                     <div style="margin: 5px 0px;" class="row">
+                      <input type="file" class="form-control o_website_form_input" name="x_academic" id="x_academic" multiple="true" onchange="FileDetails()" required=""/>
+                      </div>
+                      <div style="margin: 5px 0px;" class="row">
+                    <a id="savepop"><span id="show_academic_qualification_name"></span></a>
+                    </div>
+                  </div>
+                  <div id="saveacc" class="modal">
+                    <div class="bg_white">
+                      <span class="saveclose" id="saveclose">x</span>
+                      <img class="modal-content" id="popsave"/>
+                      <div id="caption"></div>
+                    </div>
+                     </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_experience_year">
+                     Year of practical experience in engineering ASEAN MRA(Number) &amp;nbsp;<span style="color:red;">*</span>
+                 </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="number" class="form-control o_website_form_input" name="x_experience_year"/>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_date_of_previous_application"> Date of previous application &amp;nbsp;<span style="color:red;">*</span></label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="o_website_form_date input-group date" id="datepicker18" data-target-input="nearest">
+                      <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker18" name="x_date_of_previous_application" required=""/>
+                      <div class="input-group-append" data-target="#datepicker18" data-toggle="datetimepicker">
+                        <div class="input-group-text">
+                          <i class="fa fa-calendar"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">	
+              		<div class="col-lg-2">
+                      	<label class="col-form-label o_fake_editable" for="x_other_attachments_filename_1">
+                      	Other Documents
+                      	</label>
+                      </div>
+                      <div class="col-lg-4">
+                         	<input type="text" class="form-control o_website_form_input" name="x_other_attachments_filename_1"/>
+                      </div> 
+                      <div class="col-lg-2">
+                      	<label class="col-form-label o_fake_editable" for="x_other_attachment_1">
+                      	Other Document Attachments
+                      	</label>
+                      </div>
+                      <div class="col-lg-4">
+                        <div style="margin: 5px 0px;" class="row">
+                          <input type="file" class="form-control o_website_form_input" id="x_other_attachment_1" name="x_other_attachment_1" onchange="namecombiod1()"/>
+                        </div>
+                        <div style="margin: 5px 0px;" class="row">
+                         <a id="otherdocument1" onclick="popup();">
+                           <span id="show_other_attachment_1"/></a>
+                          <img id="testpop"/>
+                        </div>
+                        <input type="hidden" id="x_other_attachments_filename_1" name="x_other_attachment_name_1"/>
+                        </div>
+                      <div id="popod1" class="modal">
+                          <div class="bg_white">
+                       		<span class="close" id="closeod1">x</span>
+                       		<img class="modal-content" id="otherdoc1"/>
+                       	  <div id="caption"></div>
+                    	</div>
+                    	</div>
+                  </div>
+                <div class="row form-group form-field o_fake_not_editable">	
+                  <div class="col-lg-2">
+                  	<label class="col-form-label o_fake_editable" for="x_other_attachments_filename_2">
+                  	Other Documents
+                  	</label>
+                  </div>
+                  <div class="col-lg-4">
+                     	<input type="text" class="form-control o_website_form_input" name="x_other_attachments_filename_2"/>
+                  </div>
+                  <div class="col-lg-2">
+                  	<label class="col-form-label o_fake_editable" for="x_other_attachment_2">
+                  	Other Document Attachments
+                  	</label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div style="margin: 5px 0px;" class="row">
+                      <input type="file" class="form-control o_website_form_input" id="x_other_attachment_2" name="x_other_attachment_2" onchange="namecombiod2()"/>
+                    </div>
+                    <div style="margin: 5px 0px;" class="row">
+                     <a id="otherdocument2" onclick="popup();">
+                       <span id="show_other_attachment_2"/></a>
+                       <img id="testpop"/>
+                     </div>
+                     <input type="hidden" id="x_other_attachments_filename_2" name="x_other_attachment_name_2"/>
+                   </div>
+                   <div id="popod2" class="modal">
+                    <div class="bg_white">
+                      <span class="close" id="closeod2">x</span>
+                      <img class="modal-content" id="otherdoc2"/>
+                      <div id="caption"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">	
+                  <div class="col-lg-2">
+                  	<label class="col-form-label o_fake_editable" for="x_other_attachments_filename_3">
+                  	Other Documents
+                  	</label>
+                  </div>
+                  <div class="col-lg-4">
+                     	<input type="text" class="form-control o_website_form_input" name="x_other_attachments_filename_3"/>
+                  </div>
+                  <div class="col-lg-2">
+                  	<label class="col-form-label o_fake_editable" for="x_other_attachment_3">
+                  	Other Document Attachments
+                  	</label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div style="margin: 5px 0px;" class="row">
+                      <input type="file" class="form-control o_website_form_input" id="x_other_attachment_3" name="x_other_attachment_3" onchange="namecombiod3()"/>
+                    </div>
+                    <div style="margin: 5px 0px;" class="row">
+                     <a id="otherdocument3" onclick="popup();">
+                       <span id="show_other_attachment_3"/></a>
+                       <img id="testpop"/>
+                     </div>
+                     <input type="hidden" id="x_other_attachments_filename_3" name="x_other_attachment_name_3"/>
+                   </div>
+                   <div id="popod3" class="modal">
+                    <div class="bg_white">
+                      <span class="close" id="closeod3">x</span>
+                      <img class="modal-content" id="otherdoc3"/>
+                      <div id="caption"></div>
+                    </div>
+                  </div>
+                </div> 
+                <div class="row form-group form-field o_fake_not_editable">	
+                  <div class="col-lg-2">
+                  	<label class="col-form-label o_fake_editable" for="x_other_attachments_filename_4">
+                  	Other Documents
+                  	</label>
+                  </div>
+                  <div class="col-lg-4">
+                     	<input type="text" class="form-control o_website_form_input" name="x_other_attachments_filename_4"/>
+                  </div>
+                  <div class="col-lg-2">
+                  	<label class="col-form-label o_fake_editable" for="x_other_attachment_4">
+                  	Other Document Attachments
+                  	</label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div style="margin: 5px 0px;" class="row">
+                      <input type="file" class="form-control o_website_form_input" id="x_other_attachment_4" name="x_other_attachment_4" onchange="namecombiod4()"/>
+                    </div>
+                    <div style="margin: 5px 0px;" class="row">
+                     <a id="otherdocument4" onclick="popup();">
+                       <span id="show_other_attachment_4"/></a>
+                       <img id="testpop"/>
+                     </div>
+                     <input type="hidden" id="x_other_attachments_filename_4" name="x_other_attachment_name_4"/>
+                   </div>
+                   <div id="popod4" class="modal">
+                    <div class="bg_white">
+                      <span class="close" id="closeod4">x</span>
+                      <img class="modal-content" id="otherdoc4"/>
+                      <div id="caption"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row form-group form-field o_website_form_custom">
+                  <div class="col-lg-6">
+                    <label class="col-form-label o_fake_editable" for="x_work_fifteen_year">
+                     I am a Professional Engineeer 
+                  </label>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="o_website_form_flex">
+                      <div class="radio o_website_form_flex_item">
+                        <label>
+                          <input type="radio" class="o_website_form_input" name="x_work_fifteen_year" value="Yes"/>
+                          <span class="o_fake_editable">
+                               Yes
+                            </span>
+                        </label>
+                      </div>
+                      <div class="radio o_website_form_flex_item">
+                        <label>
+                          <input type="radio" class="o_website_form_input" name="x_work_fifteen_year" value="No"/>
+                          <span class="o_fake_editable">
+                                 No
+                              </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_website_form_custom">
+                  <div class="col-lg-6">
+                    <label class="col-form-label o_fake_editable" for="x_meet_requirement">
+                     I meet all the requirements as stated in Article3 of the ASEAN Mutual Recognition Arrangement MRA
+                  </label>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="o_website_form_flex">
+                      <div class="radio o_website_form_flex_item">
+                        <label>
+                          <input type="radio" class="o_website_form_input" name="x_meet_requirement" value="Yes"/>
+                          <span class="o_fake_editable">
+                                 Yes
+                              </span>
+                        </label>
+                      </div>
+                      <div class="radio o_website_form_flex_item">
+                        <label>
+                          <input type="radio" class="o_website_form_input" name="x_meet_requirement" value="No"/>
+                          <span class="o_fake_editable">
+                                  No
+                             </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_website_form_custom">
+                  <div class="col-lg-6">
+                    <label class="col-form-label o_fake_editable" for="x_no_discipline">
+                      No Disciplinary action have been taken against me 
+                  </label>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="o_website_form_flex">
+                      <div class="radio o_website_form_flex_item">
+                        <label>
+                          <input type="radio" class="o_website_form_input" name="x_no_discipline" value="Yes"/>
+                          <span class="o_fake_editable">
+                               Yes
+                            </span>
+                        </label>
+                      </div>
+                      <div class="radio o_website_form_flex_item">
+                        <label>
+                          <input type="radio" class="o_website_form_input" name="x_no_discipline" value="No"/>
+                          <span class="o_fake_editable">
+                                No
+                            </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group row form-field o_fake_not_editable o_website_form_required_custom">
+                  <input type="file" class="form-control o_website_form_input" accept="image/*" name="x_photo" id="file" onchange="loadFile(event)" style="display: none;cursor: pointer;" required=""/>
+                  <img class="img img-fluid" onclick="chooseFile();" id="output" style="width: 120px; height: 130px;" data-original-title="" title="" aria-describedby="tooltip366954" src="/web/image/2707/default-user-icon.jpg"/>
+                </div>
+                <div class="row">
+                  <span class="form-field">&amp;nbsp;<span style="color:red;">*</span>Please aﬃx recent photo (Passport size) </span>
+                </div>
+              </div>
+            </div>
+            <!--<div class="col-lg-6 s_title pt0 pb0" style="text-align: center;">-->
+            <!--                         <h1 class="s_title_default" style="text-align: left; ">-->
+            <!--                           <div class="form-group row">-->
+            <!--                 </div>-->
+            <!--                 </h1>-->
+            <!--               </div>-->
+            <div class="container-fluid">
+              <div class="row s_nb_column_fixed">
+                <div class="col-lg-12 s_title pt0 pb0" style="text-align: center;">
+                  <h1 class="s_title_default" style="text-align: right; ">
+                    <div class="form-group row">
+                      <div style="font-size: 16px;" class="offset-lg-12 offset-md-12 col-md-12 col-lg-12">
+                        <!--<a style="font-size: 16px;font-weight: bold;" class="btn btn-primary" t-attf-href="/home"> -->
+                        <!--       &lt; &lt; Previous-->
+                        <!--      </a>-->
+                         <t t-if="pre_id">
+                          <input type="hidden" name="pre_id" t-att-value="pre_id"/>
+                          <input type="hidden" name="pre_type" value="pre_type"/>
+                          <a t-attf-href="registration_back?pre_type=2&amp;pre_id={{pre_id}}" class="btn btn-primary"> Back</a>
+                          <!--<button formaction="/recregistration_back" style="font-size: 13px;font-weight: bold;" class="btn btn-primary"><span class="fa fa-save"/> Back</button>-->
+                         </t>
+                        <button style="font-weight: bold;" type="submit" class="btn btn-primary  o_website_form_send o_default_snippet_text">  Next &gt;&gt; </button>
+                        <span id="o_website_form_result"/>
+                      </div>
+                    </div>
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </t>
+      <t t-if="pdata">
+        <form action="/update_acperegistrationform/" method="post" class="s_website_form container-fluid mt10 o_fake_not_editable" enctype="multipart/form-data" data-name="Form Builder" data-model_name="hr.applicant" data-success_page="/acpeproexperience">
+          <div class="container-fluid">
+            <h1 class="text-center mb8" style="font-size: 15px; font-weight: bold;margin-left:10px;"><font style="font-size: 15px;font-weight: bold;float:left;">Step 1</font> 
+                               APPLICATION FOR  ASEAN CHARTERED PROFESSIONAL ENGINEER (ACPE) <span t-esc="counter"/>
+                            </h1>
+            <div class="row form-group form-field d-none">
+              <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+              <div class="col-lg-3">
+                <label class="col-form-label o_fake_editable" for="job_id">
+                      
+                  </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="job_id" value="2"/>
+              </div>
+            </div>
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="partner_id">
+                    
+                </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="partner_id" t-att-value="request.env.user.partner_id.id"/>
+              </div>
+            </div>
+            <div class="row form-group form-field d-none">
+              <div class="col-lg-3 col-md-4">
+                <label class="col-form-label o_fake_editable" for="x_state">
+                      
+                  </label>
+              </div>
+              <div class="col-lg-7 col-md-8">
+                <input type="text" class="form-control o_website_form_input" name="x_state" value="2"/>
+              </div>
+              <div class="row form-group form-field d-none">
+                <div class="col-lg-3 col-md-4">
+                  <label class="col-form-label o_fake_editable" for="id">
+                      View ID
+                  </label>
+                </div>
+                <div class="col-lg-7 col-md-8">
+                  <input type="text" class="form-control o_website_form_input" name="id" t-att-value="id or pdata.id"/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-10" style="padding-left:25px;">
+                <div class="form-group row form-field o_fake_not_editable ">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_reg_no">Register No.&amp;nbsp;<span style="color:red;">*</span></label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control o_website_form_input" readonly="true" name="x_reg_no" t-att-value="x_reg_no or pdata.x_reg_no" required="" placeholder="ACPE-0000"/>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="partner_name">Name&amp;nbsp;<span style="color:red;">*</span></label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control o_website_form_input" name="partner_name" t-att-value="partner_name or pdata.partner_name" required=""/>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable ">
+                  
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_dob"> Date of Birth&amp;nbsp;<span style="color:red;">*</span> </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="o_website_form_date input-group date" id="datepicker15" data-target-input="nearest">
+                      <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker15" name="x_dob" t-att-value="x_dob or pdata.x_dob" required=""/>
+                      <div class="input-group-append" data-target="#datepicker15" data-toggle="datetimepicker">
+                        <div class="input-group-text">
+                          <i class="fa fa-calendar"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="email_from">Email&amp;nbsp;<span style="color:red;">*</span></label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control o_website_form_input" name="email_from" t-att-value="email_from or pdata.email_from" required=""/>
+                  </div>
+                </div>
+                 <div class="form-group row form-field o_fake_not_editable ">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="partner_phone">Tel No.&amp;nbsp;<span style="color:red;">*</span></label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="number" class="form-control o_website_form_input" name="partner_phone" t-att-value="partner_phone or pdata.partner_phone" required=""/>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_fax_no">
+                     Fax No.
+                 </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control o_website_form_input" t-att-value="x_fax_no or pdata.x_fax_no" name="x_fax_no"/>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable ">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_address_en">
+                      Home Address
+                  </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <textarea class="form-control o_website_form_input" name="x_address_en" t-att-value="x_address_en or pdata.x_address_en" required="" rows="2" cols="50"><t t-esc="pdata.x_address_en or x_address_en"/></textarea>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_office_address">
+                      Office Address 
+                  </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <textarea class="form-control o_website_form_input" name="x_office_address" t-att-value="x_office_address or pdata.x_office_address" required="" rows="2" cols="50"><t t-esc="pdata.x_office_address or x_office_address"/></textarea>
+                  </div>
+                </div>
+               
+                <div class="form-group row form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_nrc_no_en">
+         Identity Card No&amp;nbsp;<span style="color:red;">*</span>
+      </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <select id="nrceng1" style="font-family:Pyidaungsu; border-radius:0.25rem; height:30px;width: 15%;" name="x_nrc1en" t-att-value="x_nrc1en or pdata.x_nrc1en" onchange="myFunction()">
+                      <option id="name" value="1" t-att-selected="'true' if pdata.x_nrc1en == '1' else None">1</option>
+                      <option id="name" value="2" t-att-selected="'true' if pdata.x_nrc1en == '2' else None">2</option>
+                      <option id="name" value="3" t-att-selected="'true' if pdata.x_nrc1en == '3' else None">3</option>
+                      <option id="name" value="4" t-att-selected="'true' if pdata.x_nrc1en == '4' else None">4</option>
+                      <option id="name" value="5" t-att-selected="'true' if pdata.x_nrc1en == '5' else None">5</option>
+                      <option id="name" value="6" t-att-selected="'true' if pdata.x_nrc1en == '6' else None">6</option>
+                      <option id="name" value="7" t-att-selected="'true' if pdata.x_nrc1en == '7' else None">7</option>
+                      <option id="name" value="8" t-att-selected="'true' if pdata.x_nrc1en == '8' else None">8</option>
+                      <option id="name" value="9" t-att-selected="'true' if pdata.x_nrc1en == '9' else None">9</option>
+                      <option id="name" value="10" t-att-selected="'true' if pdata.x_nrc1en == '10' else None">10</option>
+                      <option id="name" value="11" t-att-selected="'true' if pdata.x_nrc1en == '11' else None">11</option>
+                      <option id="name" value="12" t-att-selected="'true' if pdata.x_nrc1en == '12' else None">12</option>
+                      <option id="name" value="13" t-att-selected="'true' if pdata.x_nrc1en == '13' else None">13</option>
+                      <option id="name" value="14" t-att-selected="'true' if pdata.x_nrc1en == '14' else None">14</option>
+                    </select>
+                    <select id="nrceng2" style="font-family:Pyidaungsu; border-radius:0.25rem; height:30px;width: 30%;" name="x_nrc2en" t-att-value="x_nrc2en or pdata.x_nrc2en" onchange="myFunction()">
+                      <t t-foreach="nrc" t-as="nrc">
+                        <t t-set="nrc2" t-value="nrc.x_name"/>
+                        <option t-att-selected="'true' if pdata.x_nrc2en == nrc2 else None">
+                          <t t-esc="nrc.x_name"/>
+                        </option>
+                      </t>
+                    </select>
+                    <select id="nrceng3" style="font-family:Pyidaungsu; border-radius:0.25rem; height:30px;width: 15%;" name="x_nrc3en" t-att-value="x_nrc3en or pdata.x_nrc3en" onchange="myFunction()">
+                      <option id="N" t-att-selected="'true' if pdata.x_nrc3en == 'N' else None">N</option>
+                      <option id="E" t-att-selected="'true' if pdata.x_nrc3en == 'E' else None">E</option>
+                      <option id="P" t-att-selected="'true' if pdata.x_nrc3en == 'P' else None">P</option>
+                    </select>
+                    <input type="text" class="mob" id="nrceng4" name="x_nrc4en" t-att-value="x_nrc4en or pdata.x_nrc4en" onchange="myFunction()" maxlength="6" style="width:36%; font-family:Pyidaungsu;  line-height: 27px;border: 1px solid #ced4da;border-radius: 0.25rem;"/>
+                    <br/>
+                    <div style="padding-top:2px;display:none;">
+                      <span class="padding-right:9%">Checking NRC</span>
+                      <input type="text" style="font-family:Pyidaungsu; width:65%;" readonly="true" class="o_website_form_input" id="demo" name="x_nrc_no_en" t-att-value="x_nrc_no_en or pdata.x_nrc_no_en"/>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_identity_card_date">
+         Identity&amp;nbsp;Card&amp;nbsp;Date&amp;nbsp;<span style="color:red;">*</span>
+      </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="o_website_form_date input-group date" id="datepicker16" data-target-input="nearest">
+                      <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker16" name="x_identity_card_date" t-att-value="x_identity_card_date or pdata.x_identity_card_date" required=""/>
+                      <div class="input-group-append" data-target="#datepicker16" data-toggle="datetimepicker">
+                        <div class="input-group-text">
+                          <i class="fa fa-calendar"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!--<div class="row form-group form-field o_fake_not_editable">-->
+                  
+                <!--</div>-->
+                <div class="row form-group form-field">
+                 <div class="col-lg-2">
+                <label class="col-form-label o_fake_editable" for="x_nrc_photo_front">
+                 Identity Card Photo (Front)&amp;nbsp;<span style="color:red;">*</span>
+              </label>
+              </div>
+                <div class="col-lg-4">
+                  <div style="margin: 0px 0px;" class="row">
+                    <t t-if="pdata.x_nrc_photo_front"> 
+                    <input type="file" class="form-control o_website_form_input" name="x_nrc_photo_front" id="x_nrc_photo_front" t-att-value="pdata.x_nrc_photo_front or x_nrc_photo_front" onchange="namecombine()"/>
+                   </t>
+                   <t t-if="not pdata.x_nrc_photo_front">
+                       <input type="file" class="form-control o_website_form_input" name="x_nrc_photo_front" id="x_nrc_photo_front" t-att-value="pdata.x_nrc_photo_front or x_nrc_photo_front" onchange="namecombine()" required=""/>
+                       
+                   </t>
+                   <input type="hidden" name="x_nrc_photo_front_name" id="x_nrc_photo_front_name"/>
+                  </div>
+                  <a id="popf1" onclick=""><span id="show_nrc_front_name"/></a>
+                  <div id="popfront1" class="modal">
+                          <div class="bg_white">
+                      <span class="close" id="closef1">x</span>
+                      <img class="modal-content" id="pop11"/>
+                      <div id="caption"></div>
+                    </div>
+                     </div> 
+                   <div style="margin: 5px 0px;" id="hide_front" class="row">
+                        <t t-if="pdata.x_nrc_photo_front_name">
+                       
+                         <t t-set="var" t-value="pdata.x_nrc_photo_front_name or x_nrc_photo_front_name"/>
+                        <t t-set="fname" t-value="var.split('.')[-1].lower()"/>
+                        <t t-if="fname == 'pdf'">
+                          <span class="o_image" data-mimetype="application/pdf" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 16px; border: 0px; vertical-align: top;"/>
+                          <span style="padding-top:2px; padding-left:6px;" id="show_nrc_front_name"><t t-esc="pdata.x_nrc_photo_front_name or x_nrc_photo_front_name"/></span>
+                          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_nrc_photo_front&amp;id={{pdata.id}}&amp;filename={{pdata.x_nrc_photo_front_name}}&amp;download=true">
+                        </a>
+                        </t>
+                        <t t-if="not fname == 'pdf'">
+                          <a id="myImgf" t-attf-src="data:image/png;base64,{{pdata.x_nrc_photo_front}}"><t t-esc="pdata.x_nrc_photo_front_name or x_nrc_photo_front_name"/></a>
+                          <!--<img id="myImg" t-attf-src="data:image/png;base64,{{pdata.x_nrc_photo_front}}" style="width:10%;max-width:300px"/>-->
+                           <!--<span style="padding-top:2px; padding-left:6px;" t-esc="pdata.x_nrc_photo_front_name or x_nrc_photo_front_name" id="show_nrc_front_name"/>-->
+                        
+                          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_nrc_photo_front&amp;id={{pdata.id}}&amp;filename={{pdata.x_nrc_photo_front_name}}&amp;download=true">
+                        </a>
+                        </t>
+                        </t>
+                   </div>
+                  <!--<div id="popfront" class="modal">-->
+                  <!--        <div class="bg_white">-->
+                  <!--    <span class="close" id="closef">x</span>-->
+                  <!--    <img class="modal-content" id="pop1"/>-->
+                  <!--    <div id="caption"></div>-->
+                  <!--  </div>-->
+                  <!--   </div>                   -->
+                    <div id="myModal" class="modal">
+                          <div class="bg_white">
+                      <span class="close" id="close">x</span>
+                      <img class="modal-content" id="img01f" t-attf-src="data:image/png;base64,{{pdata.x_nrc_photo_front}}"/>
+                      <div id="caption"></div>
+                    </div>
+                     </div>
+                  
+                </div>
+                <div class="col-lg-2">
+                  <label class="col-form-label o_fake_editable" for="x_nrc_photo_back">
+                   Identity Card Photo (Back)&amp;nbsp;<span style="color:red;">*</span>
+                </label>
+                </div>
+                <div class="col-lg-4">
+                     <div style="margin: 0px 0px;" class="row">
+                 
+                   <t t-if="pdata.x_nrc_photo_back"> 
+                    <input type="file" class="form-control o_website_form_input" name="x_nrc_photo_back" id="x_nrc_photo_back" t-att-value="pdata.x_nrc_photo_back or x_nrc_photo_back" onchange="backphotoname_combine()"/>
+                   </t>
+                   <t t-if="not pdata.x_nrc_photo_back">
+                       <input type="file" class="form-control o_website_form_input" name="x_nrc_photo_back" id="x_nrc_photo_back" t-att-value="pdata.x_nrc_photo_back or x_nrc_photo_back" onchange="backphotoname_combine()" required=""/>
+                   </t>
+                   <input type="hidden" name="x_nrc_photo_back_name" id="x_nrc_photo_back_name"/>
+                  </div>
+                 <a id="popb1"><span id="show_nrc_back_name"/></a>
+                  <div id="popback1" class="modal">
+                          <div class="bg_white">
+                      <span class="close" id="closeb1">x</span>
+                      <img class="modal-content" id="pop21"/>
+                      <div id="caption"></div>
+                    </div>
+                     </div> 
+                   <div style="margin: 5px 0px;" id="hide_back" class="row">
+                        <t t-if="pdata.x_nrc_photo_back_name">
+                        
+                         <t t-set="var" t-value="pdata.x_nrc_photo_back_name or x_nrc_photo_back_name"/>
+                        <t t-set="fname" t-value="var.split('.')[-1].lower()"/>
+                        <t t-if="fname == 'pdf'">
+                          <span class="o_image" data-mimetype="application/pdf" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 16px; border: 0px; vertical-align: top;"/>
+                          <span style="padding-top:2px; padding-left:6px;" t-esc="pdata.x_nrc_photo_back_name or x_nrc_photo_back_name" id="show_nrc_back_name"/>
+                          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_nrc_photo_back&amp;id={{pdata.id}}&amp;filename={{pdata.x_nrc_photo_back_name}}&amp;download=true">
+                        </a>
+                        </t>
+                        <t t-if="not fname == 'pdf'">
+                         <a id="myImg1" t-attf-src="data:image/png;base64,{{pdata.x_nrc_photo_back}}"><t t-esc="pdata.x_nrc_photo_back_name or x_nrc_photo_back_name"/></a>
+                            <!--<img id="myImg1" t-attf-src="data:image/png;base64,{{pdata.x_nrc_photo_back}}" style="width:10%;max-width:300px"/>-->
+                          <!--<span style="padding-top:2px; padding-left:6px;" t-esc="pdata.x_nrc_photo_back_name or x_nrc_photo_back_name" id="show_nrc_back_name"/>-->
+                          <!--<span class="o_image" data-mimetype="image/png" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 16px; border: 0px; vertical-align: top;"/>-->
+                          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_nrc_photo_back&amp;id={{pdata.id}}&amp;filename={{pdata.x_nrc_photo_back_name}}&amp;download=true">
+                        </a>
+                        </t>
+                        </t>
+                   </div>
+                    <div id="myModal1" class="modal">
+                          <div class="bg_white">
+                      <span class="close" id="close1">x</span>
+                      <img class="modal-content" id="img01b" t-attf-src="data:image/png;base64,{{pdata.x_nrc_photo_back}}"/>
+                      <div id="caption"></div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" style="word-spacing: -2px;" for="x_practice_certificate_no">
+                     Practicing certificate No.<span style="color:red;">*</span>
+                 </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control o_website_form_input" name="x_practice_certificate_no" t-att-value="x_practice_certificate_no or pdata.x_practice_certificate_no"/>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_registration_date">
+                     Date of registration
+                 </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="o_website_form_date input-group date" id="datepicker17" data-target-input="nearest">
+                      <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker17" name="x_registration_date" t-att-value="x_registration_date or pdata.x_registration_date" required=""/>
+                      <div class="input-group-append" data-target="#datepicker17" data-toggle="datetimepicker">
+                        <div class="input-group-text">
+                          <i class="fa fa-calendar"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_practice_certificate_attachment">
+                     Practicing certificate attachment
+                 </label>
+                  </div>
+           <div class="col-lg-4 col-md-8">
+              <div style="margin: 0px 0px 5px 0px;" class="row">
+               <t t-if="not practicefiles">
+               <input required="" type="file" class="form-control o_website_form_input" name="x_practice"  id="x_practice" multiple="true"  onchange="SubmitPracticeFileDetails()"/>
+          </t>
+              <t t-if="practicefiles">
+               <input type="file" class="form-control o_website_form_input" name="x_practice"  id="x_practice" multiple="true" onchange="SubmitPracticeFileDetails()"/>
+          </t>
+              </div>
+               <div style="margin: 5px 0px;" class="row">
+                    <span id="show_practice_file_name"></span>
+                    </div>
+                    <div id="hide_practice_files">
+              <div t-foreach="practicefiles" t-as="practicefiles" class="row" style="margin: 0px 0px;" >
+                        <t t-if="practicefiles.datas">
+                             <t t-if="not practicefiles.mimetype == 'application/pdf'">
+                                  <t t-if="not practicefiles.mimetype == 'application/zip'">
+                                       <t t-if="not practicefiles.mimetype == 'application/rar'">
+                                 <t t-set="mySrc" t-att-value="data:image/png;base64,{{practicefiles.datas}}"/>
+                               <a id="myImg3" t-attf-src="data:image/png;base64,{{practicefiles.datas}}" t-attf-onclick="function myModal(){
+                                            document.getElementById('myModal4').style.display='block';
+                                            var img3 = document.createElement('img');
+                                            img3.src = 'data:image/png;base64,{{practicefiles.datas}}';
+                                            img3.style.margin = 'auto';
+                                            img3.style.display = 'block';
+                                            img3.style.width = '40%';
+                                            img3.style.padding = '4%';
+                                            img3.style.backgroundColor = '#ffffff';
+                                            document.getElementById('myModal4').appendChild(img3);
+                                            }; myModal();">
+                                   
+                                   <t t-esc="practicefiles.name"/></a>
+                                             <div id="myModal4" class="modal" t-attt-style="display: none;">
+                                 <span onclick="function myClose(){
+                                        document.getElementById('myModal4').style.display='none';
+                                        var olddata=document.getElementById('myModal4').lastChild;
+                                        document.getElementById('myModal4').removeChild(olddata);
+                                        }; myClose();" class="close">x</span>   
+                            </div>  
+                          </t>
+                          </t>
+                          </t>
+                          
+                          <t t-if="practicefiles.mimetype == 'application/pdf'">
+                             <a t-attf-href="/web/content/{{ (practicefiles.id) }}">
+                            <span class="o_image" data-mimetype="application/pdf" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 16px; border: 0px; vertical-align: top;"/>
+                            <t t-esc="practicefiles.name"/>
+                            </a>
+                          </t>
+                           <t t-if="practicefiles.mimetype == 'application/zip'">
+                             <a t-attf-href="/web/content/{{ (practicefiles.id) }}">
+                            <span class="o_image" data-mimetype="application/zip" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 16px; border: 0px; vertical-align: top;"/>
+                            <t t-esc="practicefiles.name"/>
+                            </a>
+                          </t>                      
+                          <t t-if="practicefiles.mimetype == 'application/rar'">
+                             <a t-attf-href="/web/content/{{ (practicefiles.id) }}">
+                            <span class="o_image" data-mimetype="application/rar" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 16px; border: 0px; vertical-align: top;"/>
+                            <t t-esc="practicefiles.name"/>
+                            </a>
+                          </t>
+                          </t>
+                   </div>    
+            </div>  
+             </div>
+
+                 <div class="col-lg-2">
+    <label class="col-form-label o_fake_editable" for="x_discipline_s">Engineering Discipline&amp;nbsp;<span style="color:red;">*</span></label>
+   </div>
+<div class="col-lg-4">
+   
+<t t-if="pdata.x_discipline and ddata">
+<input type="hidden" id="ch" t-att-value="len(pdata.x_discipline)"/>
+ <div class="d-none" id="overlay" onclick="hide(event)"></div>
+    
+            <div>
+               <a onclick="dropDown(event);" class="menu-btn form-control" style="text-align: center; height: auto; min-height:calc(1.5em + 0.75rem + 2px);">
+                    <t t-if="pdata.x_discipline">
+                      <t t-set="j" t-value="0"/>
+                        <span id="DIV">
+                         <t t-foreach="pdata.x_discipline" t-as="dis">
+                             <t t-set="a" t-value="len(pdata.x_discipline)"/>
+                             <t t-if="a &gt; 4"><t t-set="j" t-value="1"/></t>
+                            
+                             <t t-if="a &lt;= 4"><t t-if="j == 0"><button t-att-id="'reqsr'+str(dis.id)" class="menu-btn"><t t-esc="dis.x_name"/></button></t></t>
+                             <t t-if="a &gt; 4"><t t-if="j == 1"><button t-att-id="'reqsr'+str(dis.id)" class="menu-btn d-none"><t t-esc="dis.x_name"/></button></t></t>
+                         </t>
+                         
+                        <span id="cho"> </span><t t-if="j == 1"><span id="ldis"><t t-esc="len(pdata.x_discipline)"/> options selected</span></t>
+                        </span> 
+                    </t>
+                   <t t-if="not pdata.x_discipline"><span id="cho">Choose Discipline  </span></t><span style="float:right;">&#9013; </span>
+                </a>
+                <div id="selist" class="d-none shadow rounded menu">
+                     <t t-foreach="ddata" t-as="dd">
+                      <t t-set="var" t-value="0"/>
+                         <t t-foreach="pdata.x_discipline" t-as="dis">
+                            <t t-if="dd.id == dis.id">
+                              <t t-set="var" t-value="1"/>
+                            </t>
+                          </t>
+                        <span class="d-block menu-option"><label>
+                           <input t-att-id="dd.id" t-attf-onclick="function myCheckbox(){  
+                             
+                            var DIV = document.getElementById('DIV');
+                            var chid =  document.getElementById('ch').value;
+                            var ch = parseInt(chid);
+                            var ch1 = ch;
+                             
+                            if (ch &gt; 3){
+                                if(ch == 4){
+                                    var i;
+                                    for (i=0; i &lt;= 3; i++){
+                                        DIV.getElementsByTagName('button')[i].className = 'menu-btn d-none';
+                                    }
+                                }
+                                    
+                                var rm = document.createElement('button');
+                                rm.innerHTML = '{{dd.x_name}}';
+                                rm.setAttribute('id', 'reqsr' + '{{dd.id}}');
+                                rm.setAttribute('class','menu-btn d-none');
+                                rmid = 'reqsr' + '{{dd.id}}';
+                            }
+                             
+                            if (ch &lt;= 3){
+                                var oop = document.getElementById('spa');
+                                if (DIV.contains(oop)){
+                                     document.getElementById('spa').remove();
+                                };
+                                var rm = document.createElement('button');
+                                rm.innerHTML = '{{dd.x_name}}';
+                                rm.setAttribute('id', 'reqsr' + '{{dd.id}}');
+                                rm.setAttribute('class','menu-btn');
+                                rmid = 'reqsr' + '{{dd.id}}';
+                                
+                            }
+                              
+                            var des = document.getElementById('{{dd.id}}');
+                            
+                            if (des.checked) { 
+                                var ldis = document.getElementById('ldis');
+                                if (DIV.contains(ldis)){
+                                     document.getElementById('ldis').remove();
+                                };
+                                document.getElementById('cho').classList.add('d-none');
+                                ch++;
+                                DIV.appendChild(rm);
+                               
+                                document.getElementById('ch').value = ch;   
+                                if (ch &gt; 4){
+                                    
+                                    var oop = document.getElementById('spa');
+                                    if (DIV.contains(oop)){
+                                       document.getElementById('spa').remove();
+                                    };
+                                    var op = document.createElement('span');
+                                    op.innerHTML = ch + ' options selected';
+                                    op.setAttribute('id', 'spa');
+                                    DIV.appendChild(op);
+                                }
+                            }      
+                            if (!des.checked) {  
+                                var ldis = document.getElementById('ldis');
+                                if (DIV.contains(ldis)){
+                                     document.getElementById('ldis').remove();
+                                };
+                                ch--;
+                                document.getElementById(rmid).remove();
+                                document.getElementById('ch').value = ch;
+                                if (ch == 0){
+                                    document.getElementById('cho').classList.remove('d-none');
+                                    document.getElementById('cho').innerHTML = 'Choose Discipline  &#9013;';
+                                }
+                                if(ch &gt; 4){
+                                    var oop = document.getElementById('spa');
+                                    if (DIV.contains(oop)){
+                                      document.getElementById('spa').remove();
+                                    };
+                                    var op = document.createElement('span');
+                                    op.innerHTML = ch + ' options selected';
+                                    op.setAttribute('id', 'spa');
+                                    DIV.appendChild(op);
+                                }
+                                if(ch &lt;= 4){
+                                    var oop = document.getElementById('spa');
+                                    if (DIV.contains(oop)){
+                                      document.getElementById('spa').remove();
+                                    };
+                                    var i;
+                                    for (i=0; i &lt; ch; i++){
+                                        DIV.getElementsByTagName('button')[i].classList.remove('d-none');
+                                    }
+                                }
+                               }
+                              } myCheckbox();" type="checkbox" name="x_discipline" t-att-value="dd.id" t-att-checked="true if var == 1 else None"/>
+
+                               <t t-esc="dd.x_name"/></label></span>
+                    </t>
+
+                        </div>
+                    </div>
+                </t>
+                </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_academic_qualification">
+                     Academic Qualification<span style="color:red;">*</span>
+                 </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control o_website_form_input" t-att-value="x_academic_qualification or pdata.x_academic_qualification" name="x_academic_qualification"/>
+                  </div>
+                  <div class="col-lg-2">
+                <label class="col-form-label o_fake_editable" for="x_firstdegree_attachment">
+                 Academic Qualification Attachment&amp;nbsp;<span style="color:red;">*</span>
+             </label>
+          </div>
+            <div class="col-lg-4 col-md-8">
+              <div style="margin: 0px 0px 5px 0px;" class="row">
+               <t t-if="not academicfiles">
+               <input required="" type="file" class="form-control o_website_form_input" name="x_academic"  id="x_academic" multiple="true"  onchange="SubmitFileDetails()"/>
+          </t>
+              <t t-if="academicfiles">
+               <input type="file" class="form-control o_website_form_input" name="x_academic"  id="x_academic" multiple="true" onchange="SubmitFileDetails()"/>
+          </t>
+              </div>
+               <div style="margin: 5px 0px;" class="row">
+                    <span id="show_academic_qualification_name"></span>
+                    </div>
+                    <div id="hide_academic_files">
+              <div t-foreach="academicfiles" t-as="academicfiles" class="row" style="margin: 0px 0px;" >
+                        <t t-if="academicfiles.datas">
+                             <t t-if="not academicfiles.mimetype == 'application/pdf'">
+                                  <t t-if="not academicfiles.mimetype == 'application/zip'">
+                                       <t t-if="not academicfiles.mimetype == 'application/rar'">
+                                 <t t-set="mySrc" t-att-value="data:image/png;base64,{{academicfiles.datas}}"/>
+                               <a id="myImg3" t-attf-src="data:image/png;base64,{{academicfiles.datas}}" t-attf-onclick="function myModal(){
+                                            document.getElementById('myModal3').style.display='block';
+                                            var img3 = document.createElement('img');
+                                            img3.src = 'data:image/png;base64,{{academicfiles.datas}}';
+                                            img3.style.margin = 'auto';
+                                            img3.style.display = 'block';
+                                            img3.style.width = '40%';
+                                            img3.style.padding = '4%';
+                                            img3.style.backgroundColor = '#ffffff';
+                                            document.getElementById('myModal3').appendChild(img3);
+                                            }; myModal();">
+                                   
+                                   <t t-esc="academicfiles.name"/></a>
+                                             <div id="myModal3" class="modal" t-attt-style="display: none;">
+                               
+                                       
+                                 <span onclick="function myClose(){
+                                        document.getElementById('myModal3').style.display='none';
+                                        var olddata=document.getElementById('myModal3').lastChild;
+                                        document.getElementById('myModal3').removeChild(olddata);
+                                        }; myClose();" class="close">x</span>
+                                       
+                            </div>  
+                             <!--<a t-attf-href="/web/content/{{ (academicfiles.id) }}">-->
+                                
+                           
+                          
+                            <!--</a>-->
+                          </t>
+                          </t>
+                          </t>
+                          
+                          <t t-if="academicfiles.mimetype == 'application/pdf'">
+                             <a t-attf-href="/web/content/{{ (academicfiles.id) }}">
+                            <span class="o_image" data-mimetype="application/pdf" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 16px; border: 0px; vertical-align: top;"/>
+                            <t t-esc="academicfiles.name"/>
+                            </a>
+                          </t>
+                          
+                           <t t-if="academicfiles.mimetype == 'application/zip'">
+                             <a t-attf-href="/web/content/{{ (academicfiles.id) }}">
+                            <span class="o_image" data-mimetype="application/zip" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 16px; border: 0px; vertical-align: top;"/>
+                            <t t-esc="academicfiles.name"/>
+                            </a>
+                          </t>
+                          
+                                                    
+                          <t t-if="academicfiles.mimetype == 'application/rar'">
+                             <a t-attf-href="/web/content/{{ (academicfiles.id) }}">
+                            <span class="o_image" data-mimetype="application/rar" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 16px; border: 0px; vertical-align: top;"/>
+                            <t t-esc="academicfiles.name"/>
+                            </a>
+                          </t>
+                          
+                          </t>
+                         
+                   </div>
+
+              
+              
+                        
+            </div>  
+            
+            
+             </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_experience_year">
+                     Year of practical experience in engineering ASEAN MRA(Number)
+                 </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="number" class="form-control o_website_form_input" t-att-value="x_experience_year or pdata.x_experience_year" name="x_experience_year"/>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_date_of_previous_application"> Date of previous application </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="o_website_form_date input-group date" id="datepicker18" data-target-input="nearest">
+                      <input type="text" class="form-control datetimepicker-input o_website_form_input" data-target="#datepicker18" name="x_date_of_previous_application" t-att-value="x_date_of_previous_application or pdata.x_date_of_previous_application" required=""/>
+                      <div class="input-group-append" data-target="#datepicker18" data-toggle="datetimepicker">
+                        <div class="input-group-text">
+                          <i class="fa fa-calendar"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_other_attachments_filename_1">Other Documents
+                              </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input class="form-control o_website_form_input" name="x_other_attachments_filename_1" t-att-readonly="'true' if not pdata.x_state == '1' else None" t-att-value="x_other_attachments_filename_1 or pdata.x_other_attachments_filename_1" type="text"/>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_other_attachment_1">Other Document Attachments
+                              </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="row" style="margin: 0px 0px;">
+                      <t t-if="pdata.x_other_attachment_1">
+                        <input class="form-control o_website_form_input" id="x_other_attachment_1" name="x_other_attachment_1" onchange="namecombineod1()" t-att-value="pdata.x_other_attachment_1 or x_other_attachment_1" type="file"/>
+                      </t>
+                      <t t-if="not pdata.x_other_attachment_1">
+                        <input class="form-control o_website_form_input" id="x_other_attachment_1" name="x_other_attachment_1" onchange="namecombineod1()" t-att-value="pdata.x_other_attachment_1 or x_other_attachment_1" type="file"/>
+                      </t>
+                      <input id="x_other_attachments_filename_1" name="x_other_attachment_name_1" type="hidden"/>
+                    </div>
+                    <a id="sotherdocument1" onclick="">
+                      <span id="show_other_attachment_1"/>
+                    </a>
+                    <div class="modal" id="popssod1">
+                      <div class="bg_white">
+                        <span class="close" id="closessod1">x</span>
+                        <img class="modal-content" id="othersdoc1"/>
+                        <div id="caption"/>
+                      </div>
+                    </div>
+                    <div class="row" id="hide_od1" style="margin: 5px 0px;">
+                      <t t-if="pdata.x_other_attachment_name_1">
+                        <t t-set="var" t-value="pdata.x_other_attachment_name_1 or x_other_attachment_name_1"/>
+                        <t t-set="fname" t-value="var.split('.')[-1].lower()"/>
+                        <t t-if="fname == 'pdf'">
+                          <span class="o_image" data-mimetype="application/pdf" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px;  font-size: 13px;border: 0px; vertical-align: top;"/>
+                          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">
+                            <t t-esc="pdata.x_other_attachment_name_1 or x_other_attachment_name_1"/>
+                          </span>
+                          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_1&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_1}}&amp;download=true"/>
+                        </t>
+                        <t t-if="fname == 'zip'">
+                          <span class="o_image" data-mimetype="application/zip" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 13px; border: 0px; vertical-align: top;"/>
+                          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">
+                            <t t-esc="pdata.x_other_attachment_name_1 or x_other_attachment_name_1"/>
+                          </span>
+                          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_1&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_1}}&amp;download=true"/>
+                        </t>
+                        <t t-if="not fname == 'zip'">
+                          <t t-if="not fname == 'pdf'">
+                            <a id="presotherdocument1" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_1}}">
+                              <t t-esc="pdata.x_other_attachment_name_1 or x_other_attachment_name_1"/>
+                            </a>
+                            <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_1&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_1}}&amp;download=true"/>
+                          </t>
+                        </t>
+                      </t>
+                    </div>
+                    <div class="modal" id="prepopssod1">
+                      <div class="bg_white">
+                        <span class="close" id="preclosessod1">x</span>
+                        <img class="modal-content" id="othersdoc1" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_1}}"/>
+                        <div id="caption"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_other_attachments_filename_2">Other Documents
+                              </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input class="form-control o_website_form_input" name="x_other_attachments_filename_2" t-att-readonly="'true' if not pdata.x_state == '1' else None" t-att-value="x_other_attachments_filename_2 or pdata.x_other_attachments_filename_2" type="text"/>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_other_attachment_2">Other Document Attachments
+                              </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="row" style="margin: 0px 0px;">
+                      <t t-if="pdata.x_other_attachment_2">
+                        <input class="form-control o_website_form_input" id="x_other_attachment_2" name="x_other_attachment_2" onchange="namecombineod2()" t-att-value="pdata.x_other_attachment_2 or x_other_attachment_2" type="file"/>
+                      </t>
+                      <t t-if="not pdata.x_other_attachment_2">
+                        <input class="form-control o_website_form_input" id="x_other_attachment_2" name="x_other_attachment_2" onchange="namecombineod2()" t-att-value="pdata.x_other_attachment_2 or x_other_attachment_2" type="file"/>
+                      </t>
+                      <input id="x_other_attachments_filename_2" name="x_other_attachment_name_2" type="hidden"/>
+                    </div>
+                    <a id="sotherdocument2" onclick="">
+                      <span id="show_other_attachment_2"/>
+                    </a>
+                    <div class="modal" id="popssod2">
+                      <div class="bg_white">
+                        <span class="close" id="closessod2">x</span>
+                        <img class="modal-content" id="othersdoc2"/>
+                        <div id="caption"/>
+                      </div>
+                    </div>
+                    <div class="row" id="hide_od2" style="margin: 5px 0px;">
+                      <t t-if="pdata.x_other_attachment_name_2">
+                        <t t-set="var" t-value="pdata.x_other_attachment_name_2 or x_other_attachment_name_2"/>
+                        <t t-set="fname" t-value="var.split('.')[-1].lower()"/>
+                        <t t-if="fname == 'pdf'">
+                          <span class="o_image" data-mimetype="application/pdf" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px;  font-size: 13px;border: 0px; vertical-align: top;"/>
+                          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">
+                            <t t-esc="pdata.x_other_attachment_name_2 or x_other_attachment_name_2"/>
+                          </span>
+                          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_2&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_2}}&amp;download=true"/>
+                        </t>
+                        <t t-if="fname == 'zip'">
+                          <span class="o_image" data-mimetype="application/zip" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 13px; border: 0px; vertical-align: top;"/>
+                          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">
+                            <t t-esc="pdata.x_other_attachment_name_2 or x_other_attachment_name_2"/>
+                          </span>
+                          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_2&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_2}}&amp;download=true"/>
+                        </t>
+                        <t t-if="not fname == 'zip'">
+                          <t t-if="not fname == 'pdf'">
+                            <a id="presotherdocument2" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_2}}">
+                              <t t-esc="pdata.x_other_attachment_name_2 or x_other_attachment_name_2"/>
+                            </a>
+                            <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_2&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_2}}&amp;download=true"/>
+                          </t>
+                        </t>
+                      </t>
+                    </div>
+                    <div class="modal" id="prepopssod2">
+                      <div class="bg_white">
+                        <span class="close" id="preclosessod2">x</span>
+                        <img class="modal-content" id="othersdoc2" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_2}}"/>
+                        <div id="caption"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_other_attachments_filename_3">Other Documents
+                              </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input class="form-control o_website_form_input" name="x_other_attachments_filename_3" t-att-readonly="'true' if not pdata.x_state == '1' else None" t-att-value="x_other_attachments_filename_3 or pdata.x_other_attachments_filename_3" type="text"/>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_other_attachment_3">Other Document Attachments
+                              </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="row" style="margin: 0px 0px;">
+                      <t t-if="pdata.x_other_attachment_3">
+                        <input class="form-control o_website_form_input" id="x_other_attachment_3" name="x_other_attachment_3" onchange="namecombineod3()" t-att-value="pdata.x_other_attachment_3 or x_other_attachment_3" type="file"/>
+                      </t>
+                      <t t-if="not pdata.x_other_attachment_3">
+                        <input class="form-control o_website_form_input" id="x_other_attachment_3" name="x_other_attachment_3" onchange="namecombineod3()" t-att-value="pdata.x_other_attachment_3 or x_other_attachment_3" type="file"/>
+                      </t>
+                      <input id="x_other_attachments_filename_3" name="x_other_attachment_name_3" type="hidden"/>
+                    </div>
+                    <a id="sotherdocument3" onclick="">
+                      <span id="show_other_attachment_3"/>
+                    </a>
+                    <div class="modal" id="popssod3">
+                      <div class="bg_white">
+                        <span class="close" id="closessod3">x</span>
+                        <img class="modal-content" id="othersdoc3"/>
+                        <div id="caption"/>
+                      </div>
+                    </div>
+                    <div class="row" id="hide_od3" style="margin: 5px 0px;">
+                      <t t-if="pdata.x_other_attachment_name_3">
+                        <t t-set="var" t-value="pdata.x_other_attachment_name_3 or x_other_attachment_name_3"/>
+                        <t t-set="fname" t-value="var.split('.')[-1].lower()"/>
+                        <t t-if="fname == 'pdf'">
+                          <span class="o_image" data-mimetype="application/pdf" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px;  font-size: 13px;border: 0px; vertical-align: top;"/>
+                          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">
+                            <t t-esc="pdata.x_other_attachment_name_3 or x_other_attachment_name_3"/>
+                          </span>
+                          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_3&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_3}}&amp;download=true"/>
+                        </t>
+                        <t t-if="fname == 'zip'">
+                          <span class="o_image" data-mimetype="application/zip" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 13px; border: 0px; vertical-align: top;"/>
+                          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">
+                            <t t-esc="pdata.x_other_attachment_name_3 or x_other_attachment_name_3"/>
+                          </span>
+                          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_3&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_3}}&amp;download=true"/>
+                        </t>
+                        <t t-if="not fname == 'zip'">
+                          <t t-if="not fname == 'pdf'">
+                            <a id="presotherdocument3" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_3}}">
+                              <t t-esc="pdata.x_other_attachment_name_3 or x_other_attachment_name_3"/>
+                            </a>
+                            <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_3&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_3}}&amp;download=true"/>
+                          </t>
+                        </t>
+                      </t>
+                    </div>
+                    <div class="modal" id="prepopssod3">
+                      <div class="bg_white">
+                        <span class="close" id="preclosessod3">x</span>
+                        <img class="modal-content" id="othersdoc3" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_3}}"/>
+                        <div id="caption"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_fake_not_editable">
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_other_attachments_filename_4">Other Documents
+                              </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <input class="form-control o_website_form_input" name="x_other_attachments_filename_4" t-att-readonly="'true' if not pdata.x_state == '1' else None" t-att-value="x_other_attachments_filename_4 or pdata.x_other_attachments_filename_4" type="text"/>
+                  </div>
+                  <div class="col-lg-2">
+                    <label class="col-form-label o_fake_editable" for="x_other_attachment_4">Other Document Attachments
+                              </label>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="row" style="margin: 0px 0px;">
+                      <t t-if="pdata.x_other_attachment_4">
+                        <input class="form-control o_website_form_input" id="x_other_attachment_4" name="x_other_attachment_4" onchange="namecombineod4()" t-att-value="pdata.x_other_attachment_4 or x_other_attachment_4" type="file"/>
+                      </t>
+                      <t t-if="not pdata.x_other_attachment_4">
+                        <input class="form-control o_website_form_input" id="x_other_attachment_4" name="x_other_attachment_4" onchange="namecombineod4()" t-att-value="pdata.x_other_attachment_4 or x_other_attachment_4" type="file"/>
+                      </t>
+                      <input id="x_other_attachments_filename_4" name="x_other_attachment_name_4" type="hidden"/>
+                    </div>
+                    <a id="sotherdocument4" onclick="">
+                      <span id="show_other_attachment_4"/>
+                    </a>
+                    <div class="modal" id="popssod4">
+                      <div class="bg_white">
+                        <span class="close" id="closessod4">x</span>
+                        <img class="modal-content" id="othersdoc4"/>
+                        <div id="caption"/>
+                      </div>
+                    </div>
+                    <div class="row" id="hide_od4" style="margin: 5px 0px;">
+                      <t t-if="pdata.x_other_attachment_name_4">
+                        <t t-set="var" t-value="pdata.x_other_attachment_name_4 or x_other_attachment_name_4"/>
+                        <t t-set="fname" t-value="var.split('.')[-1].lower()"/>
+                        <t t-if="fname == 'pdf'">
+                          <span class="o_image" data-mimetype="application/pdf" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px;  font-size: 13px;border: 0px; vertical-align: top;"/>
+                          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">
+                            <t t-esc="pdata.x_other_attachment_name_4 or x_other_attachment_name_4"/>
+                          </span>
+                          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_4&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_4}}&amp;download=true"/>
+                        </t>
+                        <t t-if="fname == 'zip'">
+                          <span class="o_image" data-mimetype="application/zip" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 13px; border: 0px; vertical-align: top;"/>
+                          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">
+                            <t t-esc="pdata.x_other_attachment_name_4 or x_other_attachment_name_4"/>
+                          </span>
+                          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_4&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_4}}&amp;download=true"/>
+                        </t>
+                        <t t-if="not fname == 'zip'">
+                          <t t-if="not fname == 'pdf'">
+                            <a id="presotherdocument4" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_4}}">
+                              <t t-esc="pdata.x_other_attachment_name_4 or x_other_attachment_name_4"/>
+                            </a>
+                            <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_4&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_4}}&amp;download=true"/>
+                          </t>
+                        </t>
+                      </t>
+                    </div>
+                    <div class="modal" id="prepopssod4">
+                      <div class="bg_white">
+                        <span class="close" id="preclosessod4">x</span>
+                        <img class="modal-content" id="othersdoc4" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_4}}"/>
+                        <div id="caption"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--<div class="row form-group form-field o_fake_not_editable">-->
+                <!--  <div class="col-lg-2">-->
+                <!--    <label class="col-form-label o_fake_editable" for="x_other_attachments_filename_1">Other Documents-->
+                <!--              </label>-->
+                <!--  </div>-->
+                <!--  <div class="col-lg-4">-->
+                <!--    <input class="form-control o_website_form_input" name="x_other_attachments_filename_1" t-att-readonly="'true' if not pdata.x_state == '1' else None" t-att-value="x_other_attachments_filename_1 or pdata.x_other_attachments_filename_1" type="text"/>-->
+                <!--  </div>-->
+                <!--  <div class="col-lg-2">-->
+                <!--    <label class="col-form-label o_fake_editable" for="x_other_attachment_1">Other Document Attachments-->
+                <!--              </label>-->
+                <!--  </div>-->
+                <!--  <div class="col-lg-4">-->
+                <!--    <div class="row" style="margin: 0px 0px;">-->
+                <!--      <t t-if="pdata.x_other_attachment_1">-->
+                <!--        <input class="form-control o_website_form_input" id="x_other_attachment_1" name="x_other_attachment_1" onchange="namecombineod1()" t-att-value="pdata.x_other_attachment_1 or x_other_attachment_1" type="file"/>-->
+                <!--      </t>-->
+                <!--      <t t-if="not pdata.x_other_attachment_1">-->
+                <!--        <input class="form-control o_website_form_input" id="x_other_attachment_1" name="x_other_attachment_1" onchange="namecombineod1()" t-att-value="pdata.x_other_attachment_1 or x_other_attachment_1" type="file"/>-->
+                <!--      </t>-->
+                <!--      <input id="x_other_attachments_filename_1" name="x_other_attachment_name_1" type="hidden"/>-->
+                <!--    </div>-->
+                <!--    <a id="sotherdocument1" onclick="">-->
+                <!--      <span id="show_other_attachment_1"/>-->
+                <!--    </a>-->
+                <!--    <div class="modal" id="popssod1">-->
+                <!--      <div class="bg_white">-->
+                <!--        <span class="close" id="closessod1">x</span>-->
+                <!--        <img class="modal-content" id="othersdoc1"/>-->
+                <!--        <div id="caption"/>-->
+                <!--      </div>-->
+                <!--    </div>-->
+                <!--    <div class="row" id="hide_od1" style="margin: 5px 0px;">-->
+                <!--      <t t-if="pdata.x_other_attachment_name_1">-->
+                <!--        <t t-set="var" t-value="pdata.x_other_attachment_name_1 or x_other_attachment_name_1"/>-->
+                <!--        <t t-set="fname" t-value="var.split('.')[-1].lower()"/>-->
+                <!--        <t t-if="fname == 'pdf'">-->
+                <!--          <span class="o_image" data-mimetype="application/pdf" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px;  font-size: 13px;border: 0px; vertical-align: top;"/>-->
+                <!--          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">-->
+                <!--            <t t-esc="pdata.x_other_attachment_name_1 or x_other_attachment_name_1"/>-->
+                <!--          </span>-->
+                <!--          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_1&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_1}}&amp;download=true"/>-->
+                <!--        </t>-->
+                <!--        <t t-if="fname == 'zip'">-->
+                <!--          <span class="o_image" data-mimetype="application/zip" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 13px; border: 0px; vertical-align: top;"/>-->
+                <!--          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">-->
+                <!--            <t t-esc="pdata.x_other_attachment_name_1 or x_other_attachment_name_1"/>-->
+                <!--          </span>-->
+                <!--          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_1&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_1}}&amp;download=true"/>-->
+                <!--        </t>-->
+                <!--        <t t-if="not fname == 'zip'">-->
+                <!--          <t t-if="not fname == 'pdf'">-->
+                <!--            <a id="presotherdocument1" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_1}}">-->
+                <!--              <t t-esc="pdata.x_other_attachment_name_1 or x_other_attachment_name_1"/>-->
+                <!--            </a>-->
+                <!--            <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_1&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_1}}&amp;download=true"/>-->
+                <!--          </t>-->
+                <!--        </t>-->
+                <!--      </t>-->
+                <!--    </div>-->
+                <!--    <div class="modal" id="prepopssod1">-->
+                <!--      <div class="bg_white">-->
+                <!--        <span class="close" id="preclosessod1">x</span>-->
+                <!--        <img class="modal-content" id="othersdoc1" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_1}}"/>-->
+                <!--        <div id="caption"/>-->
+                <!--      </div>-->
+                <!--    </div>-->
+                <!--  </div>-->
+                <!--</div>-->
+                <!--<div class="row form-group form-field o_fake_not_editable">-->
+                <!--  <div class="col-lg-2">-->
+                <!--    <label class="col-form-label o_fake_editable" for="x_other_attachments_filename_2">Other Documents-->
+                <!--              </label>-->
+                <!--  </div>-->
+                <!--  <div class="col-lg-4">-->
+                <!--    <input class="form-control o_website_form_input" name="x_other_attachments_filename_2" t-att-readonly="'true' if not pdata.x_state == '1' else None" t-att-value="x_other_attachments_filename_2 or pdata.x_other_attachments_filename_2" type="text"/>-->
+                <!--  </div>-->
+                <!--  <div class="col-lg-2">-->
+                <!--    <label class="col-form-label o_fake_editable" for="x_other_attachment_2">Other Document Attachments-->
+                <!--              </label>-->
+                <!--  </div>-->
+                <!--  <div class="col-lg-4">-->
+                <!--    <div class="row" style="margin: 0px 0px;">-->
+                <!--      <t t-if="pdata.x_other_attachment_2">-->
+                <!--        <input class="form-control o_website_form_input" id="x_other_attachment_2" name="x_other_attachment_2" onchange="namecombineod2()" t-att-value="pdata.x_other_attachment_2 or x_other_attachment_2" type="file"/>-->
+                <!--      </t>-->
+                <!--      <t t-if="not pdata.x_other_attachment_2">-->
+                <!--        <input class="form-control o_website_form_input" id="x_other_attachment_2" name="x_other_attachment_2" onchange="namecombineod2()" t-att-value="pdata.x_other_attachment_2 or x_other_attachment_2" type="file"/>-->
+                <!--      </t>-->
+                <!--      <input id="x_other_attachments_filename_2" name="x_other_attachment_name_2" type="hidden"/>-->
+                <!--    </div>-->
+                <!--    <a id="sotherdocument2" onclick="">-->
+                <!--      <span id="show_other_attachment_2"/>-->
+                <!--    </a>-->
+                <!--    <div class="modal" id="popssod2">-->
+                <!--      <div class="bg_white">-->
+                <!--        <span class="close" id="closessod2">x</span>-->
+                <!--        <img class="modal-content" id="othersdoc2"/>-->
+                <!--        <div id="caption"/>-->
+                <!--      </div>-->
+                <!--    </div>-->
+                <!--    <div class="row" id="hide_od2" style="margin: 5px 0px;">-->
+                <!--      <t t-if="pdata.x_other_attachment_name_2">-->
+                <!--        <t t-set="var" t-value="pdata.x_other_attachment_name_2 or x_other_attachment_name_2"/>-->
+                <!--        <t t-set="fname" t-value="var.split('.')[-1].lower()"/>-->
+                <!--        <t t-if="fname == 'pdf'">-->
+                <!--          <span class="o_image" data-mimetype="application/pdf" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px;  font-size: 13px;border: 0px; vertical-align: top;"/>-->
+                <!--          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">-->
+                <!--            <t t-esc="pdata.x_other_attachment_name_2 or x_other_attachment_name_2"/>-->
+                <!--          </span>-->
+                <!--          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_2&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_2}}&amp;download=true"/>-->
+                <!--        </t>-->
+                <!--        <t t-if="fname == 'zip'">-->
+                <!--          <span class="o_image" data-mimetype="application/zip" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 13px; border: 0px; vertical-align: top;"/>-->
+                <!--          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">-->
+                <!--            <t t-esc="pdata.x_other_attachment_name_2 or x_other_attachment_name_2"/>-->
+                <!--          </span>-->
+                <!--          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_2&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_2}}&amp;download=true"/>-->
+                <!--        </t>-->
+                <!--        <t t-if="not fname == 'zip'">-->
+                <!--          <t t-if="not fname == 'pdf'">-->
+                <!--            <a id="presotherdocument2" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_2}}">-->
+                <!--              <t t-esc="pdata.x_other_attachment_name_2 or x_other_attachment_name_2"/>-->
+                <!--            </a>-->
+                <!--            <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_2&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_2}}&amp;download=true"/>-->
+                <!--          </t>-->
+                <!--        </t>-->
+                <!--      </t>-->
+                <!--    </div>-->
+                <!--    <div class="modal" id="prepopssod2">-->
+                <!--      <div class="bg_white">-->
+                <!--        <span class="close" id="preclosessod2">x</span>-->
+                <!--        <img class="modal-content" id="othersdoc2" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_2}}"/>-->
+                <!--        <div id="caption"/>-->
+                <!--      </div>-->
+                <!--    </div>-->
+                <!--  </div>-->
+                <!--</div>-->
+                <!--<div class="row form-group form-field o_fake_not_editable">-->
+                <!--  <div class="col-lg-2">-->
+                <!--    <label class="col-form-label o_fake_editable" for="x_other_attachments_filename_3">Other Documents-->
+                <!--              </label>-->
+                <!--  </div>-->
+                <!--  <div class="col-lg-4">-->
+                <!--    <input class="form-control o_website_form_input" name="x_other_attachments_filename_3" t-att-readonly="'true' if not pdata.x_state == '1' else None" t-att-value="x_other_attachments_filename_3 or pdata.x_other_attachments_filename_3" type="text"/>-->
+                <!--  </div>-->
+                <!--  <div class="col-lg-2">-->
+                <!--    <label class="col-form-label o_fake_editable" for="x_other_attachment_3">Other Document Attachments-->
+                <!--              </label>-->
+                <!--  </div>-->
+                <!--  <div class="col-lg-4">-->
+                <!--    <div class="row" style="margin: 0px 0px;">-->
+                <!--      <t t-if="pdata.x_other_attachment_3">-->
+                <!--        <input class="form-control o_website_form_input" id="x_other_attachment_3" name="x_other_attachment_3" onchange="namecombineod3()" t-att-value="pdata.x_other_attachment_3 or x_other_attachment_3" type="file"/>-->
+                <!--      </t>-->
+                <!--      <t t-if="not pdata.x_other_attachment_3">-->
+                <!--        <input class="form-control o_website_form_input" id="x_other_attachment_3" name="x_other_attachment_3" onchange="namecombineod3()" t-att-value="pdata.x_other_attachment_3 or x_other_attachment_3" type="file"/>-->
+                <!--      </t>-->
+                <!--      <input id="x_other_attachments_filename_3" name="x_other_attachment_name_3" type="hidden"/>-->
+                <!--    </div>-->
+                <!--    <a id="sotherdocument3" onclick="">-->
+                <!--      <span id="show_other_attachment_3"/>-->
+                <!--    </a>-->
+                <!--    <div class="modal" id="popssod3">-->
+                <!--      <div class="bg_white">-->
+                <!--        <span class="close" id="closessod3">x</span>-->
+                <!--        <img class="modal-content" id="othersdoc3"/>-->
+                <!--        <div id="caption"/>-->
+                <!--      </div>-->
+                <!--    </div>-->
+                <!--    <div class="row" id="hide_od3" style="margin: 5px 0px;">-->
+                <!--      <t t-if="pdata.x_other_attachment_name_3">-->
+                <!--        <t t-set="var" t-value="pdata.x_other_attachment_name_3 or x_other_attachment_name_3"/>-->
+                <!--        <t t-set="fname" t-value="var.split('.')[-1].lower()"/>-->
+                <!--        <t t-if="fname == 'pdf'">-->
+                <!--          <span class="o_image" data-mimetype="application/pdf" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px;  font-size: 13px;border: 0px; vertical-align: top;"/>-->
+                <!--          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">-->
+                <!--            <t t-esc="pdata.x_other_attachment_name_3 or x_other_attachment_name_3"/>-->
+                <!--          </span>-->
+                <!--          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_3&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_3}}&amp;download=true"/>-->
+                <!--        </t>-->
+                <!--        <t t-if="fname == 'zip'">-->
+                <!--          <span class="o_image" data-mimetype="application/zip" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 13px; border: 0px; vertical-align: top;"/>-->
+                <!--          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">-->
+                <!--            <t t-esc="pdata.x_other_attachment_name_3 or x_other_attachment_name_3"/>-->
+                <!--          </span>-->
+                <!--          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_3&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_3}}&amp;download=true"/>-->
+                <!--        </t>-->
+                <!--        <t t-if="not fname == 'zip'">-->
+                <!--          <t t-if="not fname == 'pdf'">-->
+                <!--            <a id="presotherdocument3" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_3}}">-->
+                <!--              <t t-esc="pdata.x_other_attachment_name_3 or x_other_attachment_name_3"/>-->
+                <!--            </a>-->
+                <!--            <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_3&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_3}}&amp;download=true"/>-->
+                <!--          </t>-->
+                <!--        </t>-->
+                <!--      </t>-->
+                <!--    </div>-->
+                <!--    <div class="modal" id="prepopssod3">-->
+                <!--      <div class="bg_white">-->
+                <!--        <span class="close" id="preclosessod3">x</span>-->
+                <!--        <img class="modal-content" id="othersdoc3" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_3}}"/>-->
+                <!--        <div id="caption"/>-->
+                <!--      </div>-->
+                <!--    </div>-->
+                <!--  </div>-->
+                <!--</div>-->
+                <!--<div class="row form-group form-field o_fake_not_editable">-->
+                <!--  <div class="col-lg-2">-->
+                <!--    <label class="col-form-label o_fake_editable" for="x_other_attachments_filename_4">Other Documents-->
+                <!--              </label>-->
+                <!--  </div>-->
+                <!--  <div class="col-lg-4">-->
+                <!--    <input class="form-control o_website_form_input" name="x_other_attachments_filename_4" t-att-readonly="'true' if not pdata.x_state == '1' else None" t-att-value="x_other_attachments_filename_4 or pdata.x_other_attachments_filename_4" type="text"/>-->
+                <!--  </div>-->
+                <!--  <div class="col-lg-2">-->
+                <!--    <label class="col-form-label o_fake_editable" for="x_other_attachment_4">Other Document Attachments-->
+                <!--              </label>-->
+                <!--  </div>-->
+                <!--  <div class="col-lg-4">-->
+                <!--    <div class="row" style="margin: 0px 0px;">-->
+                <!--      <t t-if="pdata.x_other_attachment_4">-->
+                <!--        <input class="form-control o_website_form_input" id="x_other_attachment_4" name="x_other_attachment_4" onchange="namecombineod4()" t-att-value="pdata.x_other_attachment_4 or x_other_attachment_4" type="file"/>-->
+                <!--      </t>-->
+                <!--      <t t-if="not pdata.x_other_attachment_4">-->
+                <!--        <input class="form-control o_website_form_input" id="x_other_attachment_4" name="x_other_attachment_4" onchange="namecombineod4()" t-att-value="pdata.x_other_attachment_4 or x_other_attachment_4" type="file"/>-->
+                <!--      </t>-->
+                <!--      <input id="x_other_attachments_filename_4" name="x_other_attachment_name_4" type="hidden"/>-->
+                <!--    </div>-->
+                <!--    <a id="sotherdocument4" onclick="">-->
+                <!--      <span id="show_other_attachment_4"/>-->
+                <!--    </a>-->
+                <!--    <div class="modal" id="popssod4">-->
+                <!--      <div class="bg_white">-->
+                <!--        <span class="close" id="closessod4">x</span>-->
+                <!--        <img class="modal-content" id="othersdoc4"/>-->
+                <!--        <div id="caption"/>-->
+                <!--      </div>-->
+                <!--    </div>-->
+                <!--    <div class="row" id="hide_od4" style="margin: 5px 0px;">-->
+                <!--      <t t-if="pdata.x_other_attachment_name_4">-->
+                <!--        <t t-set="var" t-value="pdata.x_other_attachment_name_4 or x_other_attachment_name_4"/>-->
+                <!--        <t t-set="fname" t-value="var.split('.')[-1].lower()"/>-->
+                <!--        <t t-if="fname == 'pdf'">-->
+                <!--          <span class="o_image" data-mimetype="application/pdf" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px;  font-size: 13px;border: 0px; vertical-align: top;"/>-->
+                <!--          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">-->
+                <!--            <t t-esc="pdata.x_other_attachment_name_4 or x_other_attachment_name_4"/>-->
+                <!--          </span>-->
+                <!--          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_4&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_4}}&amp;download=true"/>-->
+                <!--        </t>-->
+                <!--        <t t-if="fname == 'zip'">-->
+                <!--          <span class="o_image" data-mimetype="application/zip" style="background-color: rgb(255, 255, 255); width: 25px; height: 25px; font-size: 13px; border: 0px; vertical-align: top;"/>-->
+                <!--          <span id="show_nrc_front_name" style="padding-top:2px; padding-left:6px;">-->
+                <!--            <t t-esc="pdata.x_other_attachment_name_4 or x_other_attachment_name_4"/>-->
+                <!--          </span>-->
+                <!--          <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_4&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_4}}&amp;download=true"/>-->
+                <!--        </t>-->
+                <!--        <t t-if="not fname == 'zip'">-->
+                <!--          <t t-if="not fname == 'pdf'">-->
+                <!--            <a id="presotherdocument4" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_4}}">-->
+                <!--              <t t-esc="pdata.x_other_attachment_name_4 or x_other_attachment_name_4"/>-->
+                <!--            </a>-->
+                <!--            <a t-attf-href="/web/content?model=hr.applicant&amp;field=x_other_attachment_4&amp;id={{pdata.id}}&amp;filename={{pdata.x_other_attachment_name_4}}&amp;download=true"/>-->
+                <!--          </t>-->
+                <!--        </t>-->
+                <!--      </t>-->
+                <!--    </div>-->
+                <!--    <div class="modal" id="prepopssod4">-->
+                <!--      <div class="bg_white">-->
+                <!--        <span class="close" id="preclosessod4">x</span>-->
+                <!--        <img class="modal-content" id="othersdoc4" t-attf-src="data:image/png;base64,{{pdata.x_other_attachment_4}}"/>-->
+                <!--        <div id="caption"/>-->
+                <!--      </div>-->
+                <!--    </div>-->
+                <!--  </div>-->
+                <!--</div>-->
+                <div class="row form-group form-field o_website_form_custom">
+                  <div class="col-lg-6">
+                    <label class="col-form-label o_fake_editable" for="x_work_fifteen_year">
+                     I am a Professional Engineeer 
+                  </label>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="o_website_form_flex">
+                      <div class="radio o_website_form_flex_item">
+                        <label>
+                          <input type="radio" class="o_website_form_input" name="x_work_fifteen_year" t-att-checked="'checked' if pdata.x_work_fifteen_year == 'Yes' else none" value="Yes"/>
+                          <span class="o_fake_editable">
+                               Yes
+                            </span>
+                        </label>
+                      </div>
+                      <div class="radio o_website_form_flex_item">
+                        <label>
+                          <input type="radio" class="o_website_form_input" name="x_work_fifteen_year" t-att-checked="'checked' if pdata.x_work_fifteen_year == 'No' else none" value="No"/>
+                          <span class="o_fake_editable">
+                                 No
+                              </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_website_form_custom">
+                  <div class="col-lg-6">
+                    <label class="col-form-label o_fake_editable" for="x_meet_requirement">
+                     I meet all the requirements as stated in Article3 of the ASEAN Mutual Recognition Arrangement MRA
+                  </label>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="o_website_form_flex">
+                      <div class="radio o_website_form_flex_item">
+                        <label>
+                          <input type="radio" class="o_website_form_input" name="x_meet_requirement" t-att-checked="'checked' if pdata.x_meet_requirement == 'Yes' else none" value="Yes"/>
+                          <span class="o_fake_editable">
+                                 Yes
+                              </span>
+                        </label>
+                      </div>
+                      <div class="radio o_website_form_flex_item">
+                        <label>
+                          <input type="radio" class="o_website_form_input" name="x_meet_requirement" t-att-checked="'checked' if pdata.x_meet_requirement == 'No' else none" value="No"/>
+                          <span class="o_fake_editable">
+                                  No
+                             </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row form-group form-field o_website_form_custom">
+                  <div class="col-lg-6">
+                    <label class="col-form-label o_fake_editable" for="x_no_discipline">
+                      No Disciplinary action have been taken against me 
+                  </label>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="o_website_form_flex">
+                      <div class="radio o_website_form_flex_item">
+                        <label>
+                          <input type="radio" class="o_website_form_input" name="x_no_discipline" t-att-checked="'checked' if pdata.x_no_discipline == 'Yes' else none" value="Yes"/>
+                          <span class="o_fake_editable">
+                               Yes
+                            </span>
+                        </label>
+                      </div>
+                      <div class="radio o_website_form_flex_item">
+                        <label>
+                          <input type="radio" class="o_website_form_input" name="x_no_discipline" t-att-checked="'checked' if pdata.x_no_discipline == 'No' else none" value="No"/>
+                          <span class="o_fake_editable">
+                                No
+                            </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+              <div class="col-lg-2">
+                <div class="form-group row form-field o_fake_not_editable o_website_form_required_custom">
+                  <input type="file" class="form-control o_website_form_input" name="x_photo" id="file" t-att-value="pdata.x_photo or x_photo" onchange="loadFile(event)" style="display: none;cursor: pointer;"/>
+                  <img class="img img-fluid" t-attf-src="data:image/png;base64,{{pdata.x_photo}}" onclick="chooseFile();" id="output" style="width: 120px; height: 130px;" data-original-title="" title="" aria-describedby="tooltip366954"/>
+                </div>
+                <div class="row">
+                  <span class="form-field">&amp;nbsp;<span style="color:red;">*</span>Please aﬃx recent photo (Passport size) </span>
+                </div>
+              </div>
+            </div>
+            <!--<div class="col-lg-6 s_title pt0 pb0" style="text-align: center;">-->
+            <!--                         <h1 class="s_title_default" style="text-align: left; ">-->
+            <!--                           <div class="form-group row">-->
+            <!--                 </div>-->
+            <!--                 </h1>-->
+            <!--               </div>-->
+            <div class="container-fluid">
+              <div class="row s_nb_column_fixed">
+                <div class="col-lg-12 s_title pt0 pb0" style="text-align: center;">
+                  <h1 class="s_title_default" style="text-align: right; ">
+                    <div class="form-group row">
+                      <div style="" class="offset-lg-12 offset-md-12 col-md-12 col-lg-12">
+                        
+                        <button style="font-weight: bold;" type="submit" class="btn btn-primary ">  Next &gt;&gt; </button>
+                        <span id="o_website_form_result"/>
+                      </div>
+                    </div>
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+ <script>
+   
+
+   
+function show_nrc_fronthide() {
+  var x = document.getElementById("hide_front");
+    x.style.display = "none";
+}
+</script>
+<script>function show_od1_hide() {
+              var x = document.getElementById('hide_od1');
+              x.style.display = 'none';
+              }
+             </script>
+                    <script>function show_od2_hide() {
+              var x = document.getElementById('hide_od2');
+              x.style.display = 'none';
+              }
+             </script>
+                    <script>function show_od3_hide() {
+              var x = document.getElementById('hide_od3');
+              x.style.display = 'none';
+              }
+             </script>
+                    <script>function show_od4_hide() {
+              var x = document.getElementById('hide_od4');
+              x.style.display = 'none';
+              }
+             </script>
+            <script>
+              function showname () {
+                  var name = document.getElementById('x_other_attachment_1'); 
+                  document.getElementById('x_other_attachments_filename_1').value=name.files.item(0).name ; 
+                };
+              function namecombineod1(){
+              var fullPath = document.getElementById('x_other_attachment_1').value;
+              var image = document.getElementById('x_other_attachment_1');
+              if(event.target.files.length &gt;0){
+              image.src = URL.createObjectURL(event.target.files[0]);
+              document.getElementById('sotherdocument1').src = image.src;
+              }
+              if (fullPath) {
+              var startIndex = (fullPath.indexOf('\\') &gt;= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+              var filename = fullPath.substring(startIndex);
+              if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+              filename = filename.substring(1);
+              var name = filename.substr(0, filename.lastIndexOf('.'));
+              var date = new Date();
+              dateString = date.toISOString().split('T')[0];
+              var extension = filename.split('.').pop();
+              var localeSpecificTime = date.toLocaleTimeString();
+              }
+              $( '#show_other_attachment_1' ).html( name+dateString+'-' +date.getHours() +':'+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+'.'+extension );
+              document.getElementById('x_other_attachments_filename_1').value= name+dateString+'-' +date.getHours() +':'+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+'.'+extension ; 
+              show_od1_hide();                  
+              } 
+              }
+              </script>
+              <script>
+                function showname () {
+                var name = document.getElementById('x_other_attachment_2'); 
+                document.getElementById('x_other_attachments_filename_2').value=name.files.item(0).name ; 
+               };
+                function namecombineod2(){
+                var fullPath = document.getElementById('x_other_attachment_2').value;
+                var image = document.getElementById('x_other_attachment_2');
+                if(event.target.files.length &gt;0){
+                image.src = URL.createObjectURL(event.target.files[0]);
+                document.getElementById('sotherdocument2').src = image.src;
+                }
+                if (fullPath) {
+                var startIndex = (fullPath.indexOf('\\') &gt;= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+                var filename = fullPath.substring(startIndex);
+                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                filename = filename.substring(1);
+                var name = filename.substr(0, filename.lastIndexOf('.'));
+                var date = new Date();
+                dateString = date.toISOString().split('T')[0];
+                var extension = filename.split('.').pop();
+                var localeSpecificTime = date.toLocaleTimeString();
+                }
+                $( '#show_other_attachment_2' ).html( name+dateString+'-' +date.getHours() +':'+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+'.'+extension );
+                document.getElementById('x_other_attachments_filename_2').value= name+dateString+'-' +date.getHours() +':'+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+'.'+extension ; 
+                show_od2_hide();                  
+                } 
+                }
+              </script>
+              <script>
+                function showname () {
+                  var name = document.getElementById('x_other_attachment_3'); 
+                  document.getElementById('x_other_attachments_filename_3').value=name.files.item(0).name ; 
+                };
+                function namecombineod3(){
+                var fullPath = document.getElementById('x_other_attachment_3').value;
+                var image = document.getElementById('x_other_attachment_3');
+                if(event.target.files.length &gt;0){
+                image.src = URL.createObjectURL(event.target.files[0]);
+                document.getElementById('sotherdocument3').src = image.src;
+                }
+                if (fullPath) {
+                var startIndex = (fullPath.indexOf('\\') &gt;= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+                var filename = fullPath.substring(startIndex);
+                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                filename = filename.substring(1);
+                var name = filename.substr(0, filename.lastIndexOf('.'));
+                var date = new Date();
+                dateString = date.toISOString().split('T')[0];
+                var extension = filename.split('.').pop();
+                var localeSpecificTime = date.toLocaleTimeString();
+                }
+                $( '#show_other_attachment_3' ).html( name+dateString+'-' +date.getHours() +':'+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+'.'+extension );
+                document.getElementById('x_other_attachments_filename_3').value= name+dateString+'-' +date.getHours() +':'+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+'.'+extension ; 
+                show_od3_hide();                  
+                } 
+                }
+               </script>
+               <script>
+                function showname () {
+                  var name = document.getElementById('x_other_attachment_4'); 
+                  document.getElementById('x_other_attachments_filename_4').value=name.files.item(0).name ; 
+                };
+                function namecombineod4(){
+                var fullPath = document.getElementById('x_other_attachment_4').value;
+                var image = document.getElementById('x_other_attachment_4');
+                if(event.target.files.length &gt;0){
+                image.src = URL.createObjectURL(event.target.files[0]);
+                document.getElementById('sotherdocument4').src = image.src;
+                }
+                if (fullPath) {
+                var startIndex = (fullPath.indexOf('\\') &gt;= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+                var filename = fullPath.substring(startIndex);
+                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                filename = filename.substring(1);
+                var name = filename.substr(0, filename.lastIndexOf('.'));
+                var date = new Date();
+                dateString = date.toISOString().split('T')[0];
+                var extension = filename.split('.').pop();
+                var localeSpecificTime = date.toLocaleTimeString();
+                }
+                $( '#show_other_attachment_4' ).html( name+dateString+'-' +date.getHours() +':'+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+'.'+extension );
+                document.getElementById('x_other_attachments_filename_4').value= name+dateString+'-' +date.getHours() +':'+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+'.'+extension ; 
+                show_od4_hide();                  
+                } 
+                }
+               </script>
+<script>
+function show_nrc_backhide() {
+  var x = document.getElementById("hide_back");
+    x.style.display = "none";
+}
+</script>
+<script>
+function show_academic_files() {
+  var x = document.getElementById("hide_academic_files");
+  
+    x.style.display = "none";
+  
+}
+</script>
+<script>
+function show_practice_files() {
+  var x = document.getElementById("hide_practice_files");
+  
+    x.style.display = "none";
+  
+}
+</script>
+<script>
+          function namecombine(){
+              var fullPath = document.getElementById('x_nrc_photo_front').value;
+              var image = document.getElementById('x_nrc_photo_front');
+              if(event.target.files.length > 0){
+            	image.src = URL.createObjectURL(event.target.files[0]);
+              document.getElementById('popf1').src = image.src;
+             }
+              if (fullPath) {
+               var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+               var filename = fullPath.substring(startIndex);
+               if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+               filename = filename.substring(1);
+             var name = filename.substr(0, filename.lastIndexOf('.'));
+             var date = new Date();
+             dateString = date.toISOString().split('T')[0];
+             var extension = filename.split('.').pop();
+             var localeSpecificTime = date.toLocaleTimeString();
+    }
+    $( "#show_nrc_front_name" ).html( name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension );
+     document.getElementById('x_nrc_photo_front_name').value= name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension ;
+      show_nrc_fronthide();
+} 
+}
+</script>
+<script>
+        function backphotoname_combine(){
+            var fullPath = document.getElementById('x_nrc_photo_back').value;
+            var image = document.getElementById('x_nrc_photo_back');
+            if(event.target.files.length > 0){
+            	image.src = URL.createObjectURL(event.target.files[0]);
+              document.getElementById('popb1').src = image.src;
+             }
+            if (fullPath) {
+             var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+             var filename = fullPath.substring(startIndex);
+             if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+             filename = filename.substring(1);
+            var name = filename.substr(0, filename.lastIndexOf('.'));
+            var date = new Date();
+            dateString = date.toISOString().split('T')[0];
+            var extension = filename.split('.').pop();
+            var localeSpecificTime = date.toLocaleTimeString();
+    }
+    $( "#show_nrc_back_name" ).html( name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension );
+    document.getElementById('x_nrc_photo_back_name').value= name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension ;
+    show_nrc_backhide();
+}
+}
+</script>
+<script>
+   function SubmitFileDetails() {
+        var fi = document.getElementById('x_academic');
+        var date = new Date();
+        dateString = date.toISOString().split('T')[0];
+        var localeSpecificTime = date.toLocaleTimeString();
+        
+        if (fi.files.length &gt; 0) {
+            show_academic_qualification_name.value = '';
+            for (var i = 0; i &lt;= fi.files.length - 1; i++) {
+
+                var fname = fi.files.item(i).name;      // THE NAME OF THE FILE.
+                var fsize = fi.files.item(i).size;      // THE SIZE OF THE FILE.
+                var fdata = fi.files.item(i).datas;
+
+              
+                document.getElementById('show_academic_qualification_name').innerHTML =
+                    document.getElementById('show_academic_qualification_name').innerHTML  +
+                      fname.substr(0, fname.lastIndexOf('.'))+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+fname.split('.').pop() + '<br/>' ;
+            }
+        }
+       show_academic_files();
+    }
+</script>
+<script>
+   function SubmitPracticeFileDetails() {
+        var fi = document.getElementById('x_practice');
+        var date = new Date();
+        dateString = date.toISOString().split('T')[0];
+        var localeSpecificTime = date.toLocaleTimeString();
+        
+        if (fi.files.length &gt; 0) {
+            show_practice_file_name.value = '';
+            for (var i = 0; i &lt;= fi.files.length - 1; i++) {
+
+                var fname = fi.files.item(i).name;      // THE NAME OF THE FILE.
+                var fsize = fi.files.item(i).size;      // THE SIZE OF THE FILE.
+                var fdata = fi.files.item(i).datas;
+
+              
+                document.getElementById('show_practice_file_name').innerHTML =
+                    document.getElementById('show_practice_file_name').innerHTML  +
+                      fname.substr(0, fname.lastIndexOf('.'))+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+fname.split('.').pop() + '<br/>' ;
+            }
+        }
+       show_practice_files();
+    }
+</script>
+      </t>
+    </div>
+  
+    <script>
+         var modal2 = document.getElementById("myModal2");
+      		// Get the image and insert it inside the modal - use its "alt" text as a caption
+      		var img2 = document.getElementById("myImg2");
+      		var modalImg = document.getElementById("img01");
+      		var captionText = document.getElementById("caption");
+      		img2.onclick = function(){
+      		  modal.style.display = "block";
+      		  modalImg.src = this.src;
+      		  captionText.innerHTML = this.alt;
+      		}
+      			// Get the element that closes the modal
+      		var span = document.getElementsByClassName("close")[0];
+      
+      		// When the user clicks on  (x), close the modal
+      		span.onclick = function() { 
+      		  modal.style.display = "none";
+      		}
+      		</script>
+        <script>
+       
+        var modal = document.getElementById("myModal");
+        var close = document.getElementById("close");
+      		// Get the image and insert it inside the modal - use its "alt" text as a caption
+      		var imgf = document.getElementById("myImgf");
+      		var modalImgf = document.getElementById("img01f");
+      		var captionText = document.getElementById("caption");
+      		imgf.onclick = function(){
+      		  modal.style.display = "block";
+           
+      		
+      		}
+      			// Get the element that closes the modal
+      		var span = document.getElementsByClassName("close")[0];
+      
+      		// When the user clicks on  (x), close the modal
+      		close.onclick = function() { 
+      		  modal.style.display = "none";
+      		}
+     </script>
+     <script>
+      		
+      		var modal1 = document.getElementById("myModal1");
+      		var close1 = document.getElementById("close1");
+      		// Get the image and insert it inside the modal - use its "alt" text as a caption
+      		var img1 = document.getElementById("myImg1");
+      		var modalImgb1 = document.getElementById("img01b");
+      		var captionText = document.getElementById("caption");
+      		img1.onclick = function(){
+      		  modal1.style.display = "block";
+            modalImgb1.src = img1.src;
+      		  captionText.innerHTML = this.alt;
+      		}
+      		// Get the element that closes the modal
+      		var span = document.getElementsByClassName("close")[0];
+      
+      		// When the user clicks on  (x), close the modal
+      		close1.onclick = function() { 
+      		  modal1.style.display = "none";
+      		}
+     </script>
+      <script>
+        var modalf = document.getElementById("popfront");
+        var closef = document.getElementById("closef");
+      		// Get the image and insert it inside the modal - use its "alt" text as a caption
+      		var imgf = document.getElementById("popf");
+      		var image = document.getElementById("x_nrc_photo_front");
+      		var modalImgf = document.getElementById("pop1");
+      		var captionText = document.getElementById("caption");
+      		imgf.onclick = function(){
+      		  modalf.style.display = "block";
+      		  modalImgf.src = imgf.src;
+      		  captionText.innerHTML = this.alt;
+      		}
+      			// Get the element that closes the modal
+      		var span = document.getElementsByClassName("close")[0];
+      
+      		// When the user clicks on  (x), close the modal
+      		closef.onclick = function() { 
+      		  modalf.style.display = "none";
+      		}
+     </script>      		
+       <script>
+        var modalb = document.getElementById("popback");
+        var closeb = document.getElementById("closeb");
+      		// Get the image and insert it inside the modal - use its "alt" text as a caption
+      		var imgb = document.getElementById("popb");
+      		var image = document.getElementById("x_nrc_photo_back");
+      		var modalImgb = document.getElementById("pop2");
+      		var captionText = document.getElementById("caption");
+      		imgb.onclick = function(){
+      		  modalb.style.display = "block";
+      		  modalImgb.src = imgb.src;
+      		  captionText.innerHTML = this.alt;
+      		}
+      			// Get the element that closes the modal
+      		var span = document.getElementsByClassName("close")[0];
+      
+      		// When the user clicks on  (x), close the modal
+      		closeb.onclick = function() { 
+      		  modalb.style.display = "none";
+      		}
+     </script> 
+      <script>
+        var modalf1 = document.getElementById("popfront1");
+        var closef1 = document.getElementById("closef1");
+      		// Get the image and insert it inside the modal - use its "alt" text as a caption
+      		var imgf1 = document.getElementById("popf1");
+      		var image = document.getElementById("x_nrc_photo_front");
+      		var modalImgf1 = document.getElementById("pop11");
+      		var captionText = document.getElementById("caption");
+      		imgf1.onclick = function(){
+      		  modalf1.style.display = "block";
+      		  modalImgf1.src = imgf1.src;
+      		  captionText.innerHTML = this.alt;
+      		}
+      			// Get the element that closes the modal
+      		var span = document.getElementsByClassName("close")[0];
+      
+      		// When the user clicks on  (x), close the modal
+      		closef1.onclick = function() { 
+      		  modalf1.style.display = "none";
+      		}
+     </script>
+      <script>
+        var modalb1 = document.getElementById("popback1");
+        var closeb1 = document.getElementById("closeb1");
+      		// Get the image and insert it inside the modal - use its "alt" text as a caption
+      		var imgb1 = document.getElementById("popb1");
+      		var image = document.getElementById("x_nrc_photo_back");
+      		var modalImgb1 = document.getElementById("pop21");
+      		var captionText = document.getElementById("caption");
+      		imgb1.onclick = function(){
+      		  modalb1.style.display = "block";
+      		  modalImgb1.src = imgb1.src;
+      		  captionText.innerHTML = this.alt;
+      		}
+      			// Get the element that closes the modal
+      		var span = document.getElementsByClassName("close")[0];
+      
+      		// When the user clicks on  (x), close the modal
+      		closeb1.onclick = function() { 
+      		  modalb1.style.display = "none";
+      		}
+     </script>
+     <!-- <script>-->
+     <!--   var modalpractice = document.getElementById("practicepop");-->
+     <!--   var closepractice = document.getElementById("practiceclose");-->
+     <!--       // Get the image and insert it inside the modal - use its "alt" text as a caption-->
+     <!--       var imgpractice = document.getElementById("ppop");-->
+     <!--       var modalImgPractice = document.getElementById("poppractice");-->
+     <!--       var captionText = document.getElementById("caption");-->
+     <!--       imgpractice.onclick = function(){-->
+     <!--         modalpractice.style.display = "block";-->
+     <!--         modalImgPractice.src = imgpractice.src;-->
+     <!--         captionText.innerHTML = this.alt;-->
+     <!--       }-->
+     <!--           // Get the element that closes the modal-->
+     <!--       var span = document.getElementsByClassName("close")[0];-->
+      
+     <!--       // When the user clicks on  (x), close the modal-->
+     <!--       closepractice.onclick = function() { -->
+     <!--         modalpractice.style.display = "none";-->
+     <!--       }-->
+     <!--</script>-->
+     <!-- <script>-->
+     <!--   var modalsave = document.getElementById("saveacc");-->
+     <!--   var closesave = document.getElementById("saveclose");-->
+     <!-- 		// Get the image and insert it inside the modal - use its "alt" text as a caption-->
+     <!-- 		var imgsave = document.getElementById("savepop");-->
+     <!-- 		var modalImgsave = document.getElementById("popsave");-->
+     <!-- 		var captionText = document.getElementById("caption");-->
+     <!-- 		imgsave.onclick = function(){-->
+     <!-- 		  modalsave.style.display = "block";-->
+     <!-- 		  modalImgsave.src = imgsave.src;-->
+     <!-- 		  captionText.innerHTML = this.alt;-->
+     <!-- 		}-->
+     <!-- 			// Get the element that closes the modal-->
+     <!-- 		var span = document.getElementsByClassName("close")[0];-->
+      
+     <!-- 		// When the user clicks on  (x), close the modal-->
+     <!-- 		closesave.onclick = function() { -->
+     <!-- 		  modalsave.style.display = "none";-->
+     <!-- 		}-->
+     <!--</script>-->
+          <script>
+            function showname () {
+              var name = document.getElementById('x_nrc_photo_front'); 
+              document.getElementById('x_nrc_photo_front_name').value=name.files.item(0).name ; 
+            };
+            function backphotoname() {
+              var name = document.getElementById('x_nrc_photo_back'); 
+              document.getElementById('x_nrc_photo_back_name').value=name.files.item(0).name ; 
+            };
+              function firstdegreename(){
+              var name = document.getElementById('x_firstdegree_attachment'); 
+              document.getElementById('x_firstdegree_filename').value=name.files.item(0).name ; 
+            }; 
+              function show_practice() {
+            var name = document.getElementById('x_practice_certificate_attachment'); 
+            document.getElementById('x_practice_certificate_attachment_name').value=name.files.item(0).name ; 
+          };
+         </script>
+        <script>
+               function myFunction() {
+              var x = document.getElementById("nrceng1").value;
+              var y = document.getElementById("nrceng2").value;
+              var z = document.getElementById("nrceng3").value;
+              var a = document.getElementById("nrceng4").value;
+              document.getElementById("demo").value = x + '/' + y  + '(' + z + ') '  + a;
+            }
+            
+            function myFunctionmm() {
+              var x = document.getElementById("nrcmm1").value;
+              var y = document.getElementById("nrcmm2").value;
+              var z = document.getElementById("nrcmm3").value;
+              var a = document.getElementById("nrcmm4").value;
+              document.getElementById("demomm").value = x + '/' + y  + '(' + z + ') '  + a;
+            }
+      
+            var loadFile = function(event) {
+              	var image = document.getElementById('output');
+              	image.src = URL.createObjectURL(event.target.files[0]);
+            };
+              
+              
+            function chooseFile() {
+            $("#file").click();
+            };
+              
+            $("#output").click(function(){
+               loadFile.functon(onclick());
+              });
+    </script>
+       <script>
+              function showname () {
+                var name = document.getElementById('x_nrc_photo_front'); 
+                document.getElementById('x_nrc_photo_front_name').value=name.files.item(0).name ; 
+              };
+          function namecombi(){
+              var fullPath = document.getElementById('x_nrc_photo_front').value;
+              var image = document.getElementById('x_nrc_photo_front');
+              if(event.target.files.length > 0){
+              	image.src = URL.createObjectURL(event.target.files[0]);
+            	  document.getElementById('popf').src = image.src;
+              	}
+              if (fullPath) {
+               var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+               var filename = fullPath.substring(startIndex);
+               if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+               filename = filename.substring(1);
+             var name = filename.substr(0, filename.lastIndexOf('.'));
+             var date = new Date();
+             dateString = date.toISOString().split('T')[0];
+             var extension = filename.split('.').pop();
+             var localeSpecificTime = date.toLocaleTimeString();
+    }
+    $( "#show_nrc_front_name" ).html( name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension );
+     document.getElementById('x_nrc_photo_front_name').value= name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension ;   
+    } 
+    }
+      </script>
+      <script>
+       var loadFile = function(event) {
+              	var image = document.getElementById('output');
+              	image.src = URL.createObjectURL(event.target.files[0]);
+              };
+               
+        function backphotoname_combi(){
+              var fullPath = document.getElementById('x_nrc_photo_back').value;
+              var image = document.getElementById('x_nrc_photo_back');
+            	if(event.target.files.length > 0){
+              	image.src = URL.createObjectURL(event.target.files[0]);
+            	  document.getElementById('popb').src = image.src;
+               }
+              if (fullPath) {
+               var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+               var filename = fullPath.substring(startIndex);
+               if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+               filename = filename.substring(1);
+             var name = filename.substr(0, filename.lastIndexOf('.'));
+             var date = new Date();
+             dateString = date.toISOString().split('T')[0];
+             var extension = filename.split('.').pop();
+             var localeSpecificTime = date.toLocaleTimeString();
+            
+    }
+    $( "#show_nrc_back_name" ).html( name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension );
+    document.getElementById('x_nrc_photo_back_name').value= name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension ;
+}
+}
+</script>
+
+        <script>
+         function FileDetails() {
+              var fi = document.getElementById('x_academic');
+              fi.src = URL.createObjectURL(event.target.files[0]);
+             document.getElementById('savepop').src = fi.src;
+              var date = new Date();
+              dateString = date.toISOString().split('T')[0];
+              var localeSpecificTime = date.toLocaleTimeString();
+              
+              if (fi.files.length &gt; 0) {
+                  show_academic_qualification_name.value = '';
+                  for (var i = 0; i &lt;= fi.files.length - 1; i++) {
+      
+                      var fname = fi.files.item(i).name;      // THE NAME OF THE FILE.
+                      var fsize = fi.files.item(i).size;      // THE SIZE OF THE FILE.
+                      var fdata = fi.files.item(i).datas;
+      
+                    
+                      document.getElementById('show_academic_qualification_name').innerHTML =
+                          document.getElementById('show_academic_qualification_name').innerHTML  +
+                            fname.substr(0, fname.lastIndexOf('.'))+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+fname.split('.').pop() + '<br/>' ;
+                  }
+              }
+          }
+      </script>
+<script>
+   function PracticeMulti() {
+        var fi = document.getElementById('x_practice');
+        fi.src = URL.createObjectURL(event.target.files[0]);
+       document.getElementById('savepop').src = fi.src;
+        var date = new Date();
+        dateString = date.toISOString().split('T')[0];
+        var localeSpecificTime = date.toLocaleTimeString();
+        
+        if (fi.files.length &gt; 0) {
+            show_practice_multi_filename.value = '';
+            for (var i = 0; i &lt;= fi.files.length - 1; i++) {
+
+                var fname = fi.files.item(i).name;      // THE NAME OF THE FILE.
+                var fsize = fi.files.item(i).size;      // THE SIZE OF THE FILE.
+                var fdata = fi.files.item(i).datas;
+
+              
+                document.getElementById('show_practice_multi_filename').innerHTML =
+                    document.getElementById('show_practice_multi_filename').innerHTML  +
+                      fname.substr(0, fname.lastIndexOf('.'))+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+fname.split('.').pop() + '<br/>' ;
+            }
+        }
+    }
+</script>
+ <script>
+        function dropDown(event) {
+           
+            document.getElementById('selist').classList.remove('d-none');
+            document.getElementById("overlay").classList.remove("d-none");
+           
+        }
+    </script>
+    <script>
+      function hide(event) {
+          var items = document.getElementsByClassName('menu');
+          for (let i = 0; i &lt; items.length; i++) {
+              items[i].classList.add("d-none");
+          }
+          document.getElementById("overlay").classList.add("d-none");
+          
+      }
+    </script>
+    <script>
+        function showname () {
+        var name = document.getElementById('x_other_attachment_1'); 
+        document.getElementById('x_other_attachments_filename_1').value=name.files.item(0).name ; 
+         };
+        function namecombiod1(){
+        var fullPath = document.getElementById('x_other_attachment_1').value;
+        var image = document.getElementById('x_other_attachment_1');
+        if(event.target.files.length > 0){
+        image.src = URL.createObjectURL(event.target.files[0]);
+        document.getElementById('otherdocument1').src = image.src;
+        }
+        if (fullPath) {
+        var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+        var filename = fullPath.substring(startIndex);
+        if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+        filename = filename.substring(1);
+        var name = filename.substr(0, filename.lastIndexOf('.'));
+        var date = new Date();
+        dateString = date.toISOString().split('T')[0];
+        var extension = filename.split('.').pop();
+        var localeSpecificTime = date.toLocaleTimeString();
+        }
+        $( "#show_other_attachment_1" ).html( name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension );
+         document.getElementById('x_other_attachments_filename_1').value= name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension ;  
+        } 
+        }
+      </script>
+      <script>
+       function showname () {
+       var name = document.getElementById('x_other_attachment_2'); 
+       document.getElementById('x_other_attachments_filename_2').value=name.files.item(0).name ; 
+       };
+       function namecombiod2(){
+       var fullPath = document.getElementById('x_other_attachment_2').value;
+       var image = document.getElementById('x_other_attachment_2');
+       if(event.target.files.length > 0){
+       image.src = URL.createObjectURL(event.target.files[0]);
+       document.getElementById('otherdocument2').src = image.src;
+      }
+       if (fullPath) {
+       var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+       var filename = fullPath.substring(startIndex);
+       if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+       filename = filename.substring(1);
+       var name = filename.substr(0, filename.lastIndexOf('.'));
+       var date = new Date();
+       dateString = date.toISOString().split('T')[0];
+       var extension = filename.split('.').pop();
+      var localeSpecificTime = date.toLocaleTimeString();
+       }
+      $( "#show_other_attachment_2" ).html( name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension );
+      document.getElementById('x_other_attachments_filename_2').value= name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension ;                   
+      } 
+      }
+      </script>
+      <script>
+        function showname () {
+        var name = document.getElementById('x_other_attachment_3'); 
+         document.getElementById('x_other_attachments_filename_3').value=name.files.item(0).name ; 
+        };
+        function namecombiod3(){
+        var fullPath = document.getElementById('x_other_attachment_3').value;
+         var image = document.getElementById('x_other_attachment_3');
+         if(event.target.files.length > 0){
+         image.src = URL.createObjectURL(event.target.files[0]);
+         document.getElementById('otherdocument3').src = image.src;
+        }
+         if (fullPath) {
+         var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+         var filename = fullPath.substring(startIndex);
+         if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+         filename = filename.substring(1);
+         var name = filename.substr(0, filename.lastIndexOf('.'));
+         var date = new Date();
+         dateString = date.toISOString().split('T')[0];
+         var extension = filename.split('.').pop();
+         var localeSpecificTime = date.toLocaleTimeString();
+         }
+         $( "#show_other_attachment_3" ).html( name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension );
+         document.getElementById('x_other_attachments_filename_3').value= name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension ;                   
+        } 
+        }
+      </script>
+      <script>
+         function showname () {
+         var name = document.getElementById('x_other_attachment_4'); 
+         document.getElementById('x_other_attachments_filename_4').value=name.files.item(0).name ; 
+         };
+         function namecombiod4(){
+         var fullPath = document.getElementById('x_other_attachment_4').value;
+         var image = document.getElementById('x_other_attachment_4');
+        if(event.target.files.length > 0){
+         image.src = URL.createObjectURL(event.target.files[0]);
+         document.getElementById('otherdocument4').src = image.src;
+         }
+         if (fullPath) {
+         var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+         var filename = fullPath.substring(startIndex);
+         if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+         filename = filename.substring(1);
+         var name = filename.substr(0, filename.lastIndexOf('.'));
+         var date = new Date();
+         dateString = date.toISOString().split('T')[0];
+         var extension = filename.split('.').pop();
+         var localeSpecificTime = date.toLocaleTimeString();
+         }
+         $( "#show_other_attachment_4" ).html( name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension );
+         document.getElementById('x_other_attachments_filename_4').value= name+dateString+"-" +date.getHours() +":"+ date.getMinutes()+(Math.floor(Math.random()*90000) + 10000)+"."+extension ;                   
+         } 
+         }
+       </script>
+
+<!-- Modal Popup -->
+      <script>
+        var modalod1 = document.getElementById("popod1");
+        var closeod1 = document.getElementById("closeod1");
+          // Get the image and insert it inside the modal - use its "alt" text as a caption
+          var imgod1 = document.getElementById("otherdocument1");
+          var image = document.getElementById("x_other_attachment_1");
+          var modalImgod1 = document.getElementById("otherdoc1");
+          var captionText = document.getElementById("caption");
+          imgod1.onclick = function(){
+            modalod1.style.display = "block";
+            modalImgod1.src = imgod1.src;
+            captionText.innerHTML = this.alt;
+          }
+            // Get the element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+      
+          // When the user clicks on  (x), close the modal
+          closeod1.onclick = function() { 
+            modalod1.style.display = "none";
+          }
+     </script>
+      <script>
+         var modalod2 = document.getElementById("popod2");
+        var closeod2 = document.getElementById("closeod2");
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var imgod2 = document.getElementById("otherdocument2");
+         var image = document.getElementById("x_other_attachment_2");
+         var modalImgod2 = document.getElementById("otherdoc2");
+         var captionText = document.getElementById("caption");
+         imgod2.onclick = function(){
+        modalod2.style.display = "block";
+         modalImgod2.src = imgod2.src;
+         captionText.innerHTML = this.alt;
+         }
+        // Get the element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on  (x), close the modal
+        closeod2.onclick = function() { 
+         modalod2.style.display = "none";
+         }
+    </script>
+    <script>
+         var modalod3 = document.getElementById("popod3");
+        var closeod3 = document.getElementById("closeod3");
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var imgod3 = document.getElementById("otherdocument3");
+         var image = document.getElementById("x_other_attachment_3");
+         var modalImgod3 = document.getElementById("otherdoc3");
+         var captionText = document.getElementById("caption");
+         imgod3.onclick = function(){
+        modalod3.style.display = "block";
+         modalImgod3.src = imgod3.src;
+         captionText.innerHTML = this.alt;
+         }
+        // Get the element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on  (x), close the modal
+        closeod3.onclick = function() { 
+         modalod3.style.display = "none";
+         }
+    </script>
+    <script>
+     var modalod4 = document.getElementById("popod4");
+      var closeod4 = document.getElementById("closeod4");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+     var imgod4 = document.getElementById("otherdocument4");
+     var image = document.getElementById("x_other_attachment_4");
+     var modalImgod4 = document.getElementById("otherdoc4");
+     var captionText = document.getElementById("caption");
+     imgod4.onclick = function(){
+      modalod4.style.display = "block";
+     modalImgod4.src = imgod4.src;
+      captionText.innerHTML = this.alt;
+     }
+      // Get the element that closes the modal
+     var span = document.getElementsByClassName("close")[0];
+     // When the user clicks on  (x), close the modal
+     closeod4.onclick = function() { 
+     modalod4.style.display = "none";
+     }
+    </script>
+    <script>
+     var modalsod1 = document.getElementById("popssod1");
+     var closesod1 = document.getElementById("closessod1");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+     var imgsod1 = document.getElementById("sotherdocument1");
+     var image = document.getElementById("x_other_attachment_1");
+     var modalImgsod1 = document.getElementById("othersdoc1");
+     var captionText = document.getElementById("caption");
+     imgsod1.onclick = function(){
+      modalsod1.style.display = "block";
+     modalImgsod1.src = imgsod1.src;
+      captionText.innerHTML = this.alt;
+     }
+      // Get the element that closes the modal
+     var span = document.getElementsByClassName("close")[0];
+     // When the user clicks on  (x), close the modal
+     closesod1.onclick = function() { 
+     modalsod1.style.display = "none";
+     }
+    </script>
+    <script>
+     var premodalsod1 = document.getElementById("prepopssod1");
+     var preclosesod1 = document.getElementById("preclosessod1");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+     var preimgsod1 = document.getElementById("presotherdocument1");
+     var preimage = document.getElementById("x_other_attachment_1");
+     var premodalImgsod1 = document.getElementById("othersdoc1");
+     var captionText = document.getElementById("caption");
+     preimgsod1.onclick = function(){
+      premodalsod1.style.display = "block";
+     modalImgsod1.src = preimgsod1.src;
+      captionText.innerHTML = this.alt;
+     }
+      // Get the element that closes the modal
+     var span = document.getElementsByClassName("close")[0];
+     // When the user clicks on  (x), close the modal
+     preclosesod1.onclick = function() { 
+     premodalsod1.style.display = "none";
+     }
+    </script>
+    <script>
+     var modalsod2 = document.getElementById("popssod2");
+     var closesod2 = document.getElementById("closessod2");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+     var imgsod2 = document.getElementById("sotherdocument2");
+     var image = document.getElementById("x_other_attachment_2");
+     var modalImgsod2 = document.getElementById("othersdoc2");
+     var captionText = document.getElementById("caption");
+     imgsod2.onclick = function(){
+      modalsod2.style.display = "block";
+     modalImgsod2.src = imgsod2.src;
+      captionText.innerHTML = this.alt;
+     }
+      // Get the element that closes the modal
+     var span = document.getElementsByClassName("close")[0];
+     // When the user clicks on  (x), close the modal
+     closesod2.onclick = function() { 
+     modalsod2.style.display = "none";
+     }
+    </script>
+    <script>
+     var premodalsod2 = document.getElementById("prepopssod2");
+     var preclosesod2 = document.getElementById("preclosessod2");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+     var preimgsod2 = document.getElementById("presotherdocument2");
+     var preimage = document.getElementById("x_other_attachment_2");
+     var premodalImgsod2 = document.getElementById("othersdoc2");
+     var captionText = document.getElementById("caption");
+     preimgsod2.onclick = function(){
+      premodalsod2.style.display = "block";
+     modalImgsod2.src = preimgsod2.src;
+      captionText.innerHTML = this.alt;
+     }
+      // Get the element that closes the modal
+     var span = document.getElementsByClassName("close")[0];
+     // When the user clicks on  (x), close the modal
+     preclosesod2.onclick = function() { 
+     premodalsod2.style.display = "none";
+     }
+    </script>
+    <script>
+     var modalsod3 = document.getElementById("popssod3");
+     var closesod3 = document.getElementById("closessod3");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+     var imgsod3 = document.getElementById("sotherdocument3");
+     var image = document.getElementById("x_other_attachment_3");
+     var modalImgsod3 = document.getElementById("othersdoc3");
+     var captionText = document.getElementById("caption");
+     imgsod3.onclick = function(){
+      modalsod3.style.display = "block";
+     modalImgsod3.src = imgsod3.src;
+      captionText.innerHTML = this.alt;
+     }
+      // Get the element that closes the modal
+     var span = document.getElementsByClassName("close")[0];
+     // When the user clicks on  (x), close the modal
+     closesod3.onclick = function() { 
+     modalsod3.style.display = "none";
+     }
+    </script>
+    <script>
+     var premodalsod3 = document.getElementById("prepopssod3");
+     var preclosesod3 = document.getElementById("preclosessod3");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+     var preimgsod3 = document.getElementById("presotherdocument3");
+     var preimage = document.getElementById("x_other_attachment_3");
+     var premodalImgsod3 = document.getElementById("othersdoc3");
+     var captionText = document.getElementById("caption");
+     preimgsod3.onclick = function(){
+      premodalsod3.style.display = "block";
+     modalImgsod3.src = preimgsod3.src;
+      captionText.innerHTML = this.alt;
+     }
+      // Get the element that closes the modal
+     var span = document.getElementsByClassName("close")[0];
+     // When the user clicks on  (x), close the modal
+     preclosesod3.onclick = function() { 
+     premodalsod3.style.display = "none";
+     }
+    </script>
+    <script>
+     var modalsod4 = document.getElementById("popssod4");
+     var closesod4 = document.getElementById("closessod4");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+     var imgsod4 = document.getElementById("sotherdocument4");
+     var image = document.getElementById("x_other_attachment_4");
+     var modalImgsod4 = document.getElementById("othersdoc4");
+     var captionText = document.getElementById("caption");
+     imgsod4.onclick = function(){
+      modalsod4.style.display = "block";
+     modalImgsod4.src = imgsod4.src;
+      captionText.innerHTML = this.alt;
+     }
+      // Get the element that closes the modal
+     var span = document.getElementsByClassName("close")[0];
+     // When the user clicks on  (x), close the modal
+     closesod4.onclick = function() { 
+     modalsod4.style.display = "none";
+     }
+    </script>
+    <script>
+     var premodalsod4 = document.getElementById("prepopssod4");
+     var preclosesod4 = document.getElementById("preclosessod4");
+      // Get the image and insert it inside the modal - use its "alt" text as a caption
+     var preimgsod4 = document.getElementById("presotherdocument4");
+     var preimage = document.getElementById("x_other_attachment_4");
+     var premodalImgsod4 = document.getElementById("othersdoc4");
+     var captionText = document.getElementById("caption");
+     preimgsod4.onclick = function(){
+      premodalsod4.style.display = "block";
+     modalImgsod4.src = preimgsod4.src;
+      captionText.innerHTML = this.alt;
+     }
+      // Get the element that closes the modal
+     var span = document.getElementsByClassName("close")[0];
+     // When the user clicks on  (x), close the modal
+     preclosesod4.onclick = function() { 
+     premodalsod4.style.display = "none";
+     }
+    </script>
+  </t>
+</t>
