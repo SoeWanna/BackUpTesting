@@ -1,0 +1,149 @@
+<div class="col-lg-4">
+  <t t-if="pdata.x_discipline">
+    <input id="ch" t-att-value="len(pdata.x_discipline)" type="hidden"/>
+    <div class="d-none" id="overlay" onclick="hide(event)"/>
+    <div>
+      <a class="menu-btn form-control" onclick="dropDown(event);" style="text-align: center; height:auto; min-height:calc(1.5em + 0.75rem + 2px);">
+        <t t-if="pdata.x_discipline">
+          <t t-set="j" t-value="0"/>
+          <span id="DIV">
+            <t t-as="dis" t-foreach="pdata.x_discipline">
+              <t t-set="a" t-value="len(pdata.x_discipline)"/>
+              <t t-if="a &gt; 4">
+                <t t-set="j" t-value="1"/>
+              </t>
+              <t t-if="a &lt;= 4">
+                <t t-if="j == 0">
+                  <button class="menu-btn" t-att-id="'reqsr'+str(dis.id)">
+                    <t t-esc="dis.x_name"/>
+                  </button>
+                </t>
+              </t>
+              <t t-if="a &gt; 4">
+                <t t-if="j == 1">
+                  <button class="menu-btn d-none" t-att-id="'reqsr'+str(dis.id)">
+                    <t t-esc="dis.x_name"/>
+                  </button>
+                </t>
+              </t>
+            </t>
+            <span id="cho"/>
+            <t t-if="j == 1">
+              <span id="ldis">
+                <t t-esc="len(pdata.x_discipline)"/>&amp;nbsp;options selected</span>
+              </t>
+            </span>
+          </t>
+          <t t-if="not pdata.x_discipline">
+            <span id="cho">Choose Discipline  </span>
+          </t><span style="float:right;">⌵ </span></a>
+          <div class="d-none shadow rounded menu" id="selist">
+            <t t-as="dd" t-foreach="ddata">
+              <t t-set="var" t-value="0"/>
+              <t t-as="dis" t-foreach="pdata.x_discipline">
+                <t t-if="dd.id == dis.id">
+                  <t t-set="var" t-value="1"/>
+                </t>
+              </t>
+              <span class="d-block menu-option">
+                <label>
+                  <input name="x_discipline" t-att-checked="true if var == 1 else None" t-att-id="dd.id" t-att-value="dd.id" 
+                  t-attf-onclick="function myCheckbox(){
+                      var DIV = document.getElementById('DIV');
+                      var chid =  document.getElementById('ch').value;
+                      var ch = parseInt(chid);
+                      var ch1 = ch;
+                      if (ch &gt; 3){
+                          if(ch == 4){
+                              var i;
+                              for (i=0; i &lt;= 3; i++){
+                                  DIV.getElementsByTagName('button')[i].className = 'menu-btn d-none';
+                                  }
+                                }
+                                var rm = document.createElement('button');
+                                rm.innerHTML = '{{dd.x_name}}';
+                                rm.setAttribute('id', 'reqsr' + '{{dd.id}}');
+                                rm.setAttribute('class','menu-btn d-none');
+                                rmid = 'reqsr' + '{{dd.id}}';
+                                } 
+                        if (ch &lt;= 3){
+                            var oop = document.getElementById('spa');
+                            if (DIV.contains(oop)){
+                                document.getElementById('spa').remove();
+                            };
+                            var rm = document.createElement('button');
+                            rm.innerHTML = '{{dd.x_name}}';
+                            rm.setAttribute('id', 'reqsr' + '{{dd.id}}');
+                            rm.setAttribute('class','menu-btn');
+                            rmid = 'reqsr' + '{{dd.id}}';
+                            }
+                            var des = document.getElementById('{{dd.id}}');
+                            if (des.checked) {
+                                var ldis = document.getElementById('ldis');
+                                if (DIV.contains(ldis)){
+                                    document.getElementById('ldis').remove();
+                                };
+                                document.getElementById('cho').classList.add('d-none');
+                                ch++;
+                                DIV.appendChild(rm);
+                                document.getElementById('ch').value = ch;
+                        if (ch &gt; 4){
+                            var oop = document.getElementById('spa');
+                            if (DIV.contains(oop)){
+                                document.getElementById('spa').remove();
+                            };
+                            var op = document.createElement('span');
+                            op.innerHTML = ch + ' options selected';
+                            op.setAttribute('id', 'spa');
+                            DIV.appendChild(op);
+                        }
+                        }
+                        if (!des.checked) {
+                            var ldis = document.getElementById('ldis');
+                            if (DIV.contains(ldis)){
+                                document.getElementById('ldis').remove();
+                            };
+                            ch--;
+                            document.getElementById(rmid).remove();
+                            document.getElementById('ch').value = ch;
+                            if (ch == 0){
+                                document.getElementById('cho').classList.remove('d-none');
+                                document.getElementById('cho').innerHTML = 'Choose Discipline  ⌵';
+                            }
+                        if(ch &gt; 4){
+                            var oop = document.getElementById('spa');
+                            if (DIV.contains(oop)){
+                                document.getElementById('spa').remove();
+                            };
+                            var op = document.createElement('span');
+                            op.innerHTML = ch + ' options selected';
+                            op.setAttribute('id', 'spa');
+                            DIV.appendChild(op);
+                        }
+                        if(ch &lt;= 4){
+                            var oop = document.getElementById('spa');
+                            if (DIV.contains(oop)){
+                                document.getElementById('spa').remove();
+                            };
+                            var i;
+                            for (i=0; i &lt; ch; i++){
+                                DIV.getElementsByTagName('button')[i].classList.remove('d-none');
+                            }
+                        }
+                        }
+                        } myCheckbox();" type="checkbox"/>
+                  <t t-esc="dd.x_name"/>
+                </label>
+              </span>
+            </t>
+          </div>
+        </div>
+      </t>
+    </div>
+    <div class="col-lg-2">
+      <label class="col-form-label o_fake_editable" for="x_experience_year" style="">Year of practial experience</label>
+    </div>
+    <div class="col-lg-4">
+      <input class="form-control o_website_form_input" max="12" min="1" name="x_experience_year" step="1" t-att-value="x_experience_year or pdata.x_experience_year" type="number"/>
+    </div>
+  </div>
